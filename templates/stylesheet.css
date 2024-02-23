@@ -64,6 +64,17 @@ body {
   color: var(--font);
   background-color: var(--background);
 }
+@media screen and (max-width: 821px) {
+  body {
+    margin: 0 1rem;
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  body {
+    margin: 0 0.5rem;
+  }
+}
 
 h2 {
   font-family: "Zen Maru Gothic";
@@ -143,7 +154,7 @@ li span {
 
 .article-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 0.5rem;
 }
 .item {
@@ -161,6 +172,14 @@ li span {
   border-radius: 0.7em 0.7em 0 0;
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 563px) {
+  .article-wrapper {
+    display: block;
+  }
+  .card {
+    margin-left: 5%;
+  }
 }
 
 footer {
