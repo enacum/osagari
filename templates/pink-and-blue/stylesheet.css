@@ -28,32 +28,32 @@ body , html {
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: black;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: bold;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: light;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: medium;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: regular;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.woff) format("woff");
 }
 body {
   max-width: 700px;
