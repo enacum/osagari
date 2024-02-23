@@ -151,6 +151,10 @@ summary::-webkit-details-marker {
 li span {
   color: var(--highlight);
 }
+.banner {
+  width: 200px;
+  height: 40px;
+}
 
 .about-here {
   padding-bottom: 1em;
