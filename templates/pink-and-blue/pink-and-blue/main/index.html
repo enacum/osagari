@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>ページタイトル</title>
+  <meta name="description" content="ページの説明">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="shortcut icon" href="images/icon/icon.jpg">
+  <link rel="apple-touch-icon" href="images/icon/icon.jpg">
+  <link rel="icon" type="image/png" href="images/icon/icon.jpg">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="RSSのURL">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:title" content="ページタイトル">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="ページURL">
+  <meta property="og:description" content="ページの説明">
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="images/icon/icon.jpg">
+</head>
+<body>
+  <header>
+    <p class="site-name">サイト名</p>
+    <p class="tab">
+      <span onclick="changeFontWeight('all')">note</span><a href="work/index.html" class="rest" title="work">work</a>
+    </p>
+  </header>
+  <main>
+    <div class="btn">
+      <details>
+        <summary><img id="about" src="images/icon/human-pi.svg" alt="about"></summary>
+        <h2>about</h2>
+        <p>サイト説明<br>
+          <a id="text-link" href="リンクURL" title="リンク先の名前">SNSリンクなど</a>
+        </p>
+        <p>ブログ名：<br>
+          かいてる人：<br>
+          URL：<br>
+          <img id="banner" src="images/icon/banner.jpg"></p>
+          </details>
+          <details>
+            <summary><img id="search" src="images/icon/search-pi.svg" alt="categories"></summary>
+            <div class="categories">
+              <p><button onclick="changeFontWeight('all')" id="all" value="all">すべて</button> / <button onclick="changeFontWeight('description')" id="description" value="description">説明</button> / <button onclick="changeFontWeight('sample')" id="sample" value="sample">サンプル</button></p>
+            </div>
+          </details>
+        </div>
+        <section class="article-container">
+          <ul class="article-wrapper">
+            <li class="item description">
+              <a href="articles/description.html" title="コードの書きかえるべき部分などの説明">
+                <h1>テンプレートの使い方</h1>
+                <p class="tag">2024/01/21 <span>&#035;説明</span></p>
+              </a>
+            </li>
+            <li class="item sample">
+              <a href="articles/sample.html" title="サンプルページ">
+                <h1>サンプルページ</h1>
+                <p class="tag">2024/01/21 <span>&#035;サンプル</span></p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <div class="copyright">
+          <small>&copy; yyyy サイトの著作者名</small>
+        </div>
+      </footer>
+      <script>
+      function changeFontWeight(targetCategory) {
+        const categories = document.querySelectorAll('.categories button');
+        const items = document.querySelectorAll('.item');
+
+        // すべての要素を非表示にする
+        items.forEach(item => item.style.display = 'none');
+
+        // targetCategoryが'all'であれば、すべての要素を表示
+        if (targetCategory === 'all') {
+          items.forEach(item => item.style.display = 'block');
+        } else {
+          // それ以外の場合、対応するカテゴリの要素だけを表示
+          items.forEach(item => {
+            if (item.classList.contains(targetCategory)) {
+              item.style.display = 'block';
+            }
+          });
+        }
+
+        // ボタンのスタイルなども変更する処理もここで追加できます
+        categories.forEach(category => {
+          category.style.fontWeight = 'normal'; // すべてのボタンのスタイルを元に戻す
+        });
+
+        // 対象のボタンに太字のスタイルを適用
+        const targetButton = document.querySelector(`.categories button[value="${targetCategory}"]`);
+        if (targetButton) {
+          targetButton.style.fontWeight = 'bold';
+        }
+      }
+      </script>
+      <script>
+      const elems = document.querySelectorAll("details");
+      let openelem = null;
+      for(elem of elems){
+        elem.addEventListener("toggle", event => {
+          if (event.target.open) {
+            if (openelem !== null) openelem.open = false;
+            openelem = event.target;
+          } else {
+            if (openelem === event.target) {openelem = null}
+          }
+        });
+      }
+      </script>
+      <script>
+      // URLのクエリパラメータから値を取得
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedButton = urlParams.get('selectedButton');
+
+      // クエリパラメータに応じてボタンをクリック
+      if (selectedButton) {
+        document.addEventListener('DOMContentLoaded', () => {
+          changeFontWeight(selectedButton);
+        });
+      }
+      </script>
+    </body>
+    </html>

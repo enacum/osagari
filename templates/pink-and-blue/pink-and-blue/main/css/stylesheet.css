@@ -1,0 +1,197 @@
+body , html {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --background: #FFE8E4;
+  --grass: #FFD4CE;
+  --font: black;
+  --palefont: #79606A;
+  --Hilight: #D45D71;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+  transition: .5s;
+}
+  :root{
+    --background: #1E2327;
+    --grass: #272E33;
+    --font: #D7D7D7;
+    --palefont: #BDBDBD;
+    --Hilight: #EC6F90;
+  }
+}
+
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Apple SD Gothic Neo", "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+  color: var(--font);
+  background-color: var(--background);
+}
+a {
+  text-decoration: none;
+  color: var(--font);
+}
+header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 85px;
+}
+.site-name {
+  font-size: 25px;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+.tab {
+  font-size: 17px;
+  margin: 15px 0 0 0;
+}
+.tab span, .rest {
+  padding: 5px 10px;
+  margin: 0 7px;
+  border-radius: 7px;
+}
+.tab span{
+  background-color: var(--Hilight);
+  color: white;
+  font-weight: bold;
+}
+.rest {
+  background-color: var(--grass);
+  border: 1px solid var(--grass);
+}
+.btn {
+  display: flex;
+  font-size: 16px;
+}
+summary {
+  display: block;
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display:none;
+}
+#about {
+  width: 20px;
+  height: auto;
+  padding: 10px;
+}
+#search {
+  width: 19px;
+  height: auto;
+  padding: 10px;
+}
+#text-link {
+  text-decoration: underline;
+}
+#banner {
+  height: 30px;
+  width: 150px;
+}
+#banner a {
+  display: block;
+}
+h2 {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--Hilight);
+}
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  font-size: 15px;
+  color: var(--font);
+}
+#all, .categories button.bold {
+  font-weight: bold;
+}
+
+main {
+  margin: 2em;
+}
+@media screen and (max-width: 480px) {
+  main {
+    margin: 1em;
+  }
+}
+@media screen and (max-width: 369px) {
+  .btn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .tab span, .rest, .btn {
+    margin: 5px;
+  }
+  #about {
+    width: 18px;
+    height: auto;
+  }
+  #search {
+    width: 17px;
+    height: auto;
+  }
+}
+
+.article-wrapper {
+  /*リストを左寄せ*/
+  padding-left: 0;
+}
+.article-wrapper li {
+  list-style: none;
+    /*リストごとの隙間をつくる*/
+  margin: 30px 0;
+}
+.item p {
+  line-height: 1.5em;
+  letter-spacing: 0.04em;
+}
+.tab, details p {
+  line-height: normal;
+}
+item a {
+  display: inline-block;
+}
+h1 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: semibold;
+}
+.tag {
+  font-size: 15px;
+  margin-top: 5px;
+  color: var(--Hilight);
+}
+
+@media screen and (max-width: 369px) {
+  h1 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 280px) {
+  h1, .tag {
+    font-size: 12px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 90px;
+}
+.copyright {
+  font-size: 17px;
+  padding: 15px 10px 30px 10px;
+}

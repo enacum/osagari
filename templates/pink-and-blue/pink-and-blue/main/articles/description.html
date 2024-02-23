@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>テンプレートの使い方</title>
+  <meta name="description" content="コードの書きかえるべき部分などの説明">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="shortcut icon" href="../images/icon/icon.jpg">
+  <link rel="apple-touch-icon" href="../images/icon/icon.jpg">
+  <link rel="icon" type="image/png" href="../images/icon/icon.jpg">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:title" content="テンプレートの使い方">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="ページURL">
+  <meta property="og:description" content="コードの書きかえるべき部分などの説明">
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="../images/icon/icon.jpg">
+</head>
+<body>
+  <header>
+    <a href="../index.html" title="ホーム"><p class="site-name">サイト名</p></a>
+    <p class="tab">
+      <a href="../index.html" title="全ての記事"><span>note</span></a><a href="../work/index.html" class="rest" title="work">work</a>
+    </p>
+  </header>
+  <main>
+    <article>
+      <h1>テンプレートの使い方</h1>
+      <p class="tag">2024/01/21</p>
+      <div class="index">
+        <h4 class="index-header">目次</h4>
+        <ol>
+          <li><a href="#files" title="各ファイルの説明">各ファイルの説明</a></li>
+          <li><a href="#com-html" title="HTMLの構成">HTMLの構成</a></li>
+          <li><a href="#js" title="notes.jsとworks.jsについて">notes.jsとworks.jsについて</a></li>
+          <li><a href="#tag" title="記事タグの使い方">記事タグの使い方</a></li>
+        </ol>
+      </div>
+      <h2 id="files">各ファイルの説明</h2>
+      <ul>
+        <li><strong>main</strong><br>
+          <p>HTML、CSS、画像、RSSなど、テンプレートが入っています。RSSを配信しない人は「update.xml」を削除して使ってください。<br>
+          ※update.xmlは手打ちでRSSを配信するためのファイルです。手打ちしない場合も削除してください。</p>
+          <p>main内のindex.htmlを開くと<a href="https://enacum.me/templates/2023_template/template/index.html" title="デモページ">デモページ</a>と同じ構成のページが開きます。</p></li>
+        <li><strong>notes.js</strong><br>
+          <p>note（ブログ）の記事を書くときに使うJavaScriptです。記事の更新時に必要な全てのコードをちょっと簡単に書くことができます。</p>
+          <p>また、headタグ内の記述も簡単になります。使い方は後述します。</p></li>
+        <li><strong>works.js</strong><br>
+        <p>work（イラスト等）の記事を書くときに使うJavaScriptです。</p></li>
+      </ul>
+      <h2 id="com-html">HTMLの構成</h2>
+      <p>HTMLには主に以下の項目が含まれます。これらは<strong>notes.js</strong>等で入力し、必要に応じて書きかえるのがおすすめです。</p>
+      <ul>
+        <li>ページの基本情報（サイト名、ページ名、ページのURL、ページの説明など）</li>
+        <li>ファビコン設定</li>
+        <li>（トップページの場合）RSSのURL</li>
+        <li>OGP設定</li>
+        <li>ナビゲーション（サイト名の部分やnote、workのボタン）</li>
+        <li>本文を書く部分</li>
+        <li>（記事の場合）記事タグ</li>
+        <li>トップページに戻るボタン</li>
+        <li>著作権表示</li>
+      </ul>
+      <h2 id="js">notes.jsとworks.jsについて</h2>
+      <p>HTMLのコードには重複する項目が多数含まれます（サイト名、著作権表示など）。また複数のページに同じ内容を記入することもあります（記事タイトルを記事本文、記事一覧、RSSにそれぞれ書くなど）。<br>
+        これらの重複する部分を一度の記入で済むようにしたのが<strong>notes.js</strong>と<strong>works.js</strong>です。サーバーの関係でPHPが使えない場合などにお使いください。</p>
+      <p>使い方は以下の通りです。</p>
+      <ol>
+        <li><strong>siteName ~ ogImage</strong>までの部分を入力する
+        <p>siteName ~ iconは一度設定したらあまり書き換えない部分、title ~ ogImageは記事ごとに書きかえる部分として想定しています。</p></li>
+        <li><strong>「ここに本文を入力」</strong>の部分に本文のコードを書く
+        <p>タイトルや日付、記事下部に付けるタグなどを除いた本文のみを書きます。コードの使い方は<a href="sample.html" title="サンプルサイト">サンプルサイト</a>のコードを参照してください。</p></li>
+        <li>Google Chromeのデベロッパーツールを開き、Consoleの欄にコピー&amp;ペーストする&plus;enterキーを押す
+        <p>JavaScriptを正しく入力できている場合、ここにHTMLコードが生成されます。</p></li>
+        <li>記事ページ、記事一覧、RSSのコードをそれぞれ完成させる
+        <p>生成されるHTMLは、<strong>冒頭 ~ html</strong>が記事ページ、<strong>li ~ li</strong>が記事一覧に追加するコード、<strong>item ~ item</strong>がRSSに追加するコードです。</p></li>
+      </ol>
+      <p>notes.jsとworks.jsはHTMLをそのまま使った場合のみに使えるものなので、HTMLを改変した場合は都度書きかえる必要があります。</p>
+      <h2 id="tag">記事タグの使い方</h2>
+      <p><strong>記事タグ</strong>とは、記事の下部に表示されているリンク、記事一覧のページに表示されるカテゴリのことで、この記事の場合、<strong>タグ</strong>は「description」で<strong>タグの名前</strong>は「#説明」になります。</p>
+      <p><strong>タグ</strong>は同じ文字列を使用することでカテゴリごとの記事を表示する仕組みになっています。<strong>タグの名前</strong>はページ上に表示されるカテゴリ名のため、分かりやすい文字列を設定します。</p>
+      <h3>記事ページの場合</h3>
+      <p>notes.js及びworks.jsで、<strong>${tag}</strong>がタグを入力する部分、<strong>${tagName}</strong>がタグの名前を入力する部分です。</p>
+      <h3>トップページの場合</h3>
+      <div class="image-container">
+        <div class="image-wrapper">
+        <a title="" href="../images/description/tag.jpg"><img src="../images/description/tag.jpg" alt="トップページのタグ"></a>
+        </div>
+      </div>
+      <p>画像下部、categoriesクラスのbuttonタグ内にある３つのallが<strong>タグ</strong>、そのあとの「すべて」が<strong>タグの名前</strong>です。</p>
+      <p class="tag"><span><a href="../index.html?selectedButton=description">&#035;説明</a></span></p>
+    </article>
+    <div class="end">
+      <p><a class="home" href="../index.html">│ home</a></p>
+    </div>
+  </main>
+  <footer>
+    <div class="copyright">
+      <small>&copy; yyyy サイトの著作者名</small>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+body , html {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --background: #f4f4f4;
+  --font: #1E2327;
+  --highlight: #4f9e92;
+  --grass: #fefefe;
+  --shadow: #e7e7e7;
+  --light: white;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    transition: .5s;
+  }
+  :root{
+    --background: #1E2327;
+    --font: #D7D7D7;
+    --highlight: #4f9e92;
+    --grass: #293035;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --light: rgba(37, 41, 44, 0.6);
+  }
+}
+
+@font-face {
+  font-family: "Zen Maru Gothic";
+  font-weight: black;
+  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf) format("truetype"),
+       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  font-weight: bold;
+  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.ttf) format("truetype"),
+       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  font-weight: light;
+  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf) format("truetype"),
+       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  font-weight: medium;
+  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf) format("truetype"),
+       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  font-weight: regular;
+  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format("truetype"),
+       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.woff) format("woff");
+}
+body {
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Apple SD Gothic Neo", "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+  color: var(--font);
+  background-color: var(--background);
+}
+
+h2 {
+  font-family: "Zen Maru Gothic";
+  color: var(--highlight);
+  font-size: 1.3em;
+}
+h3 {
+  display: inline-block;
+  font-family: "Zen Maru Gothic";
+  color: var(--font);
+  font-size: 1em;
+  padding: 1em 0;
+  margin: 0;
+}
+p {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+a {
+  font-family: "Zen Maru Gothic";
+  color: var(--highlight);
+  text-decoration: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1em;
+}
+.site-name {
+  font-family:  "Zen Maru Gothic";
+  color: var(--highlight);
+}
+nav {
+  position: relative;
+}
+details[open] ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 4em;
+  padding: 1.5em;
+  border-radius: 7px;
+  background-color: var(--grass);
+  z-index: 1000;
+  font-size: 0.9em;
+}
+details ul {
+  list-style: none;
+}
+details ul li {
+  margin-bottom: 10px; /* リストアイテムの下マージン */
+}
+details ul li:last-child {
+  margin-bottom: 0; /* リストアイテムの下マージン */
+}
+details ul li a {
+  text-decoration: none; /* リンクの下線を非表示 */
+  color: var(--font); /* リンクの文字色 */
+}
+details ul li a:hover {
+  color: var(--highlight); /* リンクにホバーした時の文字色 */
+}
+summary {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+li span {
+  color: var(--highlight);
+}
+
+.article-wrapper {
+  padding-left: 0;
+}
+.item {
+  list-style: none;
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: auto;
+}
+.copyright {
+  font-size: 1em;
+}
