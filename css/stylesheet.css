@@ -64,6 +64,17 @@ body {
   color: var(--font);
   background-color: var(--background);
 }
+@media screen and (max-width: 821px) {
+  body {
+    margin: 0 1rem;
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  body {
+    margin: 0 0.5rem;
+  }
+}
 
 h2 {
   font-family: "Zen Maru Gothic";
@@ -150,6 +161,9 @@ li span {
 }
 .whats-this {
   color: var(--highlight);
+}
+.yet {
+  text-decoration: underline dotted;
 }
 .about-here details {
   display: inline-block;
