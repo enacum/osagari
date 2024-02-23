@@ -64,6 +64,17 @@ body {
   color: var(--font);
   background-color: var(--background);
 }
+@media screen and (max-width: 821px) {
+  body {
+    margin: 0 1rem;
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  body {
+    margin: 0 0.5rem;
+  }
+}
 
 h2 {
   font-family: "Zen Maru Gothic";
@@ -175,6 +186,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 0.7em;
+}
+@media screen and (max-width: 610px) {
+  .news li {
+    display: block;
+  }
 }
 .date {
   color: var(--highlight);
