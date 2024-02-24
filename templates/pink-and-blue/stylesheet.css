@@ -10,6 +10,8 @@ body , html {
   --grass: #fefefe;
   --shadow: #e7e7e7;
   --light: white;
+  --popup: rgba(255, 255, 255, .4);
+  --backshadow: rgba(255, 255, 255, .5);
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -20,8 +22,10 @@ body , html {
     --font: #D7D7D7;
     --highlight: #4f9e92;
     --grass: #293035;
-    --shadow: rgba(0, 0, 0, 0.2);
-    --light: rgba(37, 41, 44, 0.6);
+    --shadow: rgba(0, 0, 0, .3);
+    --light: rgba(37, 41, 44, .8);
+    --popup: rgba(37, 44, 49, .8);
+    --backshadow: rgba(44, 51, 57, .3);
   }
 }
 
@@ -162,11 +166,17 @@ img {
 .about ul, .terms ul {
   padding-left: 1em;
 }
+.shadow {
+  margin: 1em 0 1.5em 0;
+  border-radius: 0.7em;
+  box-shadow: 13px 13px 30px var(--shadow),
+             -13px -13px 30px var(--light);
+}
 .contents {
   background-color: var(--grass);
   padding: 0.5em 2em;
-  margin: 1em 0 1.5em 0;
   border-radius: 0.7em;
+  border: 0.05em solid var(--backshadow);
 }
 .contents a {
   text-decoration: underline;
@@ -177,6 +187,7 @@ img {
   border-radius: 0.7em;
   box-shadow: 13px 13px 30px var(--shadow),
              -13px -13px 30px var(--light);
+  border: 0.05em solid var(--popup);
 }
 .news ul {
   padding: 0;
