@@ -176,9 +176,6 @@ li span {
 .whats-this {
   color: var(--highlight);
 }
-.yet {
-  text-decoration: underline dotted;
-}
 .about-here details {
   display: inline-block;
   list-style: none;
