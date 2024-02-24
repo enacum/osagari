@@ -10,6 +10,8 @@ body , html {
   --grass: #fefefe;
   --shadow: #e7e7e7;
   --light: white;
+  --popup: rgba(255, 255, 255, .4);
+  --backshadow: rgba(255, 255, 255, .5);
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -20,8 +22,10 @@ body , html {
     --font: #D7D7D7;
     --highlight: #4f9e92;
     --grass: #293035;
-    --shadow: rgba(0, 0, 0, 0.2);
-    --light: rgba(37, 41, 44, 0.6);
+    --shadow: rgba(0, 0, 0, .3);
+    --light: rgba(37, 41, 44, .8);
+    --popup: rgba(37, 44, 49, .7);
+    --backshadow: rgba(44, 51, 57, .5);
   }
 }
 
@@ -111,7 +115,7 @@ header {
 nav {
   position: relative;
 }
-details[open] ul {
+nav details[open] ul {
   position: absolute;
   top: 100%;
   right: 0;
@@ -122,29 +126,29 @@ details[open] ul {
   z-index: 1000;
   font-size: 0.9em;
 }
-details ul {
+nav details ul {
   list-style: none;
 }
-details ul li {
+nav details ul li {
   margin-bottom: 10px; /* リストアイテムの下マージン */
 }
-details ul li:last-child {
+nav details ul li:last-child {
   margin-bottom: 0; /* リストアイテムの下マージン */
 }
-details ul li a {
+nav details ul li a {
   text-decoration: none; /* リンクの下線を非表示 */
   color: var(--font); /* リンクの文字色 */
 }
-details ul li a:hover {
+nav details ul li a:hover {
   color: var(--highlight); /* リンクにホバーした時の文字色 */
 }
-summary {
+nav summary {
   display: block;
 }
-summary::-webkit-details-marker {
+nav summary::-webkit-details-marker {
   display: none;
 }
-li span {
+nav li span {
   color: var(--highlight);
 }
 
@@ -153,6 +157,75 @@ li span {
 }
 .item {
   list-style: none;
+}
+.card {
+  border-radius: 10px;
+  margin: 1em 0 1.5em 0;
+  box-shadow: 13px 13px 30px var(--shadow),
+               -13px -13px 30px var(--light);
+}
+.heading {
+  background-color: var(--grass);
+  font-family: "Zen Maru Gothic";
+  border-radius: 10px 10px 0 0;
+  padding: 1em 2em;
+}
+.content {
+  border: 0.05em solid var(--backshadow);
+}
+.date {
+  color: var(--highlight);
+  margin: 0;
+}
+.label {
+  padding: 0.05em 0.5em;
+  margin-right: 0.5em;
+  border-radius: 7px;
+  font-size: 0.9em;
+  font-weight: normal;
+  color: var(--background);
+  background-color: var(--highlight);
+}
+.heading h3 {
+  padding: 0;
+  margin: 0.5em 0 0 0;
+}
+.card details {
+  padding: 1em 2em;
+  cursor: pointer;
+}
+.card summary {
+  list-style: none;
+  line-height: 2em;
+}
+.content summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+.content summary::-webkit-details-marker {
+    display: none;
+}
+.content summary::after {
+    transform: translateY(-25%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 3px solid var(--highlight);
+    border-right: 3px solid var(--highlight);
+    content: '';
+    transition: transform .3s;
+}
+.content[open] summary::after {
+    transform: rotate(225deg);
+}
+.content ul {
+  padding-left: 1em;
+}
+.content a {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 footer {
