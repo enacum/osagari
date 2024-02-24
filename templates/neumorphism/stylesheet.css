@@ -9,9 +9,9 @@ body , html {
   --highlight: #4f9e92;
   --grass: #fefefe;
   --shadow: #e7e7e7;
-  --light: #fff2f2;
+  --light: white;
   --popup: rgba(255, 255, 255, .4);
-  --backshadow: rgba(255, 255, 255, .2);
+  --backshadow: rgba(255, 255, 255, .5);
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -24,7 +24,7 @@ body , html {
     --grass: #293035;
     --shadow: rgba(0, 0, 0, .3);
     --light: rgba(37, 41, 44, .8);
-    --popup: rgba(37, 44, 49, .7);
+    --popup: rgba(37, 44, 49, .8);
     --backshadow: rgba(44, 51, 57, .3);
   }
 }
@@ -32,32 +32,32 @@ body , html {
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: black;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: bold;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: light;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: medium;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.woff) format("woff");
 }
 @font-face {
   font-family: "Zen Maru Gothic";
   font-weight: regular;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.woff) format("woff");
+  src: url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format("truetype"),
+       url(../../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.woff) format("woff");
 }
 body {
   max-width: 700px;
@@ -90,10 +90,10 @@ h3 {
   font-family: "Zen Maru Gothic";
   color: var(--font);
   font-size: 1em;
-  padding: 1em;
+  padding-top: 1em;
   margin: 0;
 }
-p {
+p, .about li, .terms li {
   font-size: 1em;
   line-height: 1.6em;
 }
@@ -156,43 +156,58 @@ li span {
   color: var(--highlight);
 }
 
-.article-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 0.5rem;
-}
-.item {
-  list-style: none;
-}
-.shadow {
-  display: inline-block;
-  margin: 1em 0 1em 0;
+img {
+  display: block;
+  border-radius: 0.7em;
   width: 90%;
   height: auto;
+  margin-left: 5%;
+}
+.about ul, .terms ul {
+  padding-left: 1em;
+}
+.shadow {
+  margin: 1em 0 1.5em 0;
   border-radius: 0.7em;
   box-shadow: 13px 13px 30px var(--shadow),
              -13px -13px 30px var(--light);
 }
-.card {
+.contents {
   background-color: var(--grass);
-  border: 0.05em solid var(--backshadow);
+  padding: 0.5em 2em;
   border-radius: 0.7em;
-  width: 100%;
-  height: auto;
+  border: 0.05em solid var(--backshadow);
 }
-.card img {
-  display: block;
-  border-radius: 0.7em 0.7em 0 0;
-  width: 100%;
-  height: auto;
+.contents a {
+  text-decoration: underline;
 }
-@media screen and (max-width: 563px) {
-  .article-wrapper {
+.news {
+  padding: 0.5em 2em;
+  margin: 1em 0 1.5em 0;
+  border-radius: 0.7em;
+  box-shadow: 13px 13px 30px var(--shadow),
+             -13px -13px 30px var(--light);
+  border: 0.05em solid var(--popup);
+}
+.news ul {
+  padding: 0;
+}
+.news li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0.7em;
+}
+@media screen and (max-width: 610px) {
+  .news li {
     display: block;
   }
-  .shadow {
-    margin-left: 5%;
-  }
+}
+.date {
+  color: var(--highlight);
+}
+.news a {
+  text-decoration: underline;
 }
 
 footer {
