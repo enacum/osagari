@@ -211,6 +211,31 @@ li span {
 .date {
   color: var(--highlight);
 }
+.news-list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.news-list a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.news-list p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    margin: 0 0 1em 0;
+}
+.news-list p::after {
+    transform: translateY(10%) rotate(-45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 1.5px solid var(--highlight);
+    border-right: 1.5px solid var(--highlight);
+    content: '';
+}
 footer {
   display: flex;
   flex-flow: column;
