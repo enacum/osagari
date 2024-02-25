@@ -155,6 +155,7 @@ li span {
 }
 button {
   font-family: "Zen Maru Gothic";
+  color: var(--font);
   border: none;
   border-radius: 1em;
   padding: 0.3em 0.7em;
