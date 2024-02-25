@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>制作メモ</title>
-  <meta name="description" content="サイト制作中の気付きメモ。">
+  <title>更新履歴</title>
+  <meta name="description" content="更新履歴や返信など">
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="../images/android-chrome-256x256.png">
   <meta property="og:site_name" content="おさがり">
-  <meta property="og:title" content="制作メモ">
+  <meta property="og:title" content="更新履歴">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://osagari.enacum.me/notes/index.html">
-  <meta property="og:description" content="サイト制作中の気付きメモ。">
+  <meta property="og:url" content="https://osagari.enacum.me/news/index.html">
+  <meta property="og:description" content="更新履歴や返信など">
   <meta name="twitter:card" content="summary" />
   <meta property="og:image" content="../images/icon-512x512.png">
 </head>
@@ -31,74 +31,83 @@
         <ul>
           <li><a href="../index.html">ホーム</a></li>
           <li><a href="../templates/index.html" title="テンプレート">テンプレ</a></li>
-          <li><span>メモ</span></li>
+          <li><a href="../notes/index.html" title="サイト制作メモ">メモ</a></li>
         </ul>
       </details>
     </nav>
   </header>
   <main>
-    <div class="top-container">
-      <h2>制作メモ</h2>
-      <p>いろんな気付きメモ</p>
-    </div>
-    <section class="article-container">
-      <ul class="article-wrapper">
-        <li class="item">
-          <div class="card">
-            <div class="heading">
-              <p class="date">2024/02/24</p>
-              <h3><span class="label">固定</span>このページについて</h3>
+    <div class="news">
+      <h2>更新履歴</h2>
+      <div class="categories">
+        <p><button onclick="changeFontWeight('all')" id="all" value="all">すべて</button><button onclick="changeFontWeight('new')" id="new" value="new">更新</button><button onclick="changeFontWeight('fix')" id="fix" value="fix">修正</button><button onclick="changeFontWeight('reply')" id="reply" value="reply">返信</button></p>
+      </div>
+      <ul>
+        <li class="item new fix reply">
+          <div class="separate">
+            <p><span class="date">2024/02/25</span></p>
+            <div class="content">
+              <p class="item fix">デモサイトへのリンクを修正</p>
+              <p class="item reply">404エラーを教えてくださった方へ<a title="404エラー教えてくださった方へ" href="https://wavebox.me/msg/88izp5iol65ja52k/1g0low02fl/">返信</a>しました。ありがとうございます！</p>
+              <p class="item new">更新履歴のページを追加</p>
             </div>
-            <details class="content">
-              <summary>思いついたら書き足す形式にします</summary>
-              <p>
-                ブログ形式でいつも通り長文書こうとすると、プロでもないのにこんな語っていいのかな？とか
-                そんなに書くことないしな……と手が進まなかったので、Twitterをイメージした
-                タイムライン形式にしました。
-              </p>
-              <p>
-                ツイートにツリーを繋げていくイメージです。
-              </p>
-            </details>
           </div>
         </li>
-        <li class="item">
-          <div class="card">
-            <div class="heading">
-              <p class="date">2024/02/24</p>
-              <h3>お世話になったサイト</h3>
+        <li class="item new">
+          <div class="separate">
+            <p><span class="date">2024/02/24</span></p>
+            <div class="content">
+              <p class="item new"><a title="サイト制作メモのページ" href="notes/index.html">サイト制作メモ</a>公開</p>
+              <p class="item new"><a title="現行ソース" href="templates/neumorphism/index.html">このサイトのソース</a>へのリンクを追加</p>
             </div>
-            <details class="content">
-              <summary>HTML / CSS / JavaScriptで参考にしたサイト</summary>
-              <h3>UIデザイン/CSS</h3>
-              <ul>
-                <li>
-                  <a title="CSS Stock" href="https://pote-chil.com/css-stock/ja">CSS Stock</a>
-                  <p>
-                    このページ（制作メモ）のアコーディオンのデザインで参考にさせていただきました！
-                    矢印の向きとか切り替えるの苦手なんですよね……どこがどうなってるか想像つきにくくて
-                    自分で作ると上手くいかないのです。ちゃんと覚えたいな〜
-                  </p>
-                </li>
-                <li>
-                  <a title="DESIGN MEMO 2.0" href="https://designmemo.jp/">DESIGN MEMO 2.0</a>
-                  <p>
-                    <a title="グラスモーフィズムを表現するときのヒント" href="https://designmemo.jp/2021/01/glassmorphism.html">グラスモーフィズムの表現</a>で参考にさせていただきました。
-                    モーフィズム系はもっとスキルアップしたいですね、かわいいので。
-                    ボタンみたいになってるやつが好きなのでできるようにがんばります！
-                  </p>
-                </li>
-              </ul>
-            </details>
+          </div>
+        </li>
+        <li class="item new">
+          <div class="separate">
+            <p><span class="date">2024/02/23</span></p>
+            <div class="content">
+              <p class="item new">サイトを公開しました。</p>
+            </div>
           </div>
         </li>
       </ul>
-    </section>
+    </div>
   </main>
   <footer>
     <div class="copyright">
       <small>&copy; 2024 enacum.</small>
     </div>
   </footer>
+  <script>
+  function changeFontWeight(targetCategory) {
+    const categories = document.querySelectorAll('.categories button');
+    const items = document.querySelectorAll('.item');
+
+    // すべての要素を非表示にする
+    items.forEach(item => item.style.display = 'none');
+
+    // targetCategoryが'all'であれば、すべての要素を表示
+    if (targetCategory === 'all') {
+      items.forEach(item => item.style.display = 'block');
+    } else {
+      // それ以外の場合、対応するカテゴリの要素だけを表示
+      items.forEach(item => {
+        if (item.classList.contains(targetCategory)) {
+          item.style.display = 'block';
+        }
+      });
+    }
+
+    categories.forEach(category => {
+      category.style.backgroundColor = 'initial'; // ボタンの背景色を初期化
+    });
+
+    const targetButton = document.querySelector(`.categories button[value="${targetCategory}"]`);
+    if (targetButton) {
+      targetButton.style.backgroundColor = '#fefefe'; // ボタンの背景色を青色に変更（適宜変更してください）
+    }
+
+  }
+  </script>
 </body>
 </html>
