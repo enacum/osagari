@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
@@ -17,7 +18,12 @@
   <meta property="og:description" content="更新履歴や返信など">
   <meta name="twitter:card" content="summary" />
   <meta property="og:image" content="../images/icon-512x512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div class="site-name">
@@ -40,7 +46,10 @@
     <div class="news">
       <h2>更新履歴</h2>
       <div class="categories">
-        <p><button onclick="changeFontWeight('all')" id="all" value="all">すべて</button><button onclick="changeFontWeight('new')" id="new" value="new">更新</button><button onclick="changeFontWeight('fix')" id="fix" value="fix">修正</button><button onclick="changeFontWeight('reply')" id="reply" value="reply">返信</button></p>
+        <p><button onclick="changeFontWeight('all')" id="all" value="all">すべて</button><button
+            onclick="changeFontWeight('new')" id="new" value="new">更新</button><button onclick="changeFontWeight('fix')"
+            id="fix" value="fix">修正</button><button onclick="changeFontWeight('reply')" id="reply"
+            value="reply">返信</button></p>
       </div>
       <ul>
         <li class="item new fix reply">
@@ -48,7 +57,8 @@
             <p><span class="date">2024/02/25</span></p>
             <div class="content">
               <p class="item fix">デモサイトへのリンクを修正</p>
-              <p class="item reply">404エラーを教えてくださった方へ<a title="404エラー教えてくださった方へ" href="https://wavebox.me/msg/88izp5iol65ja52k/1g0low02fl/">返信</a>しました。ありがとうございます！</p>
+              <p class="item reply">404エラーを教えてくださった方へ<a title="404エラー教えてくださった方へ"
+                  href="https://wavebox.me/msg/88izp5iol65ja52k/1g0low02fl/">返信</a>しました。ありがとうございます！</p>
               <p class="item new">更新履歴のページを追加</p>
             </div>
           </div>
@@ -79,50 +89,51 @@
     </div>
   </footer>
   <script>
-  function changeFontWeight(targetCategory) {
-    const categories = document.querySelectorAll('.categories button');
-    const items = document.querySelectorAll('.item');
+    function changeFontWeight(targetCategory) {
+      const categories = document.querySelectorAll('.categories button');
+      const items = document.querySelectorAll('.item');
 
-    // すべての要素を非表示にする
-    items.forEach(item => item.style.display = 'none');
+      // すべての要素を非表示にする
+      items.forEach(item => item.style.display = 'none');
 
-    // targetCategoryが'all'であれば、すべての要素を表示
-    if (targetCategory === 'all') {
-      items.forEach(item => item.style.display = 'block');
-    } else {
-      // それ以外の場合、対応するカテゴリの要素だけを表示
-      items.forEach(item => {
-        if (item.classList.contains(targetCategory)) {
-          item.style.display = 'block';
-        }
-      });
-    }
-
-    // ダークモードかどうかを検出する関数
-    function isDarkMode() {
-      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-
-    // ライトモードとダークモードで異なる背景色を設定する関数
-    function setButtonBackgroundColor(targetButton) {
-      if (isDarkMode()) {
-        // ダークモードの場合の背景色
-        targetButton.style.backgroundColor = '#293035'; // ここにダークモードの背景色を指定してください
+      // targetCategoryが'all'であれば、すべての要素を表示
+      if (targetCategory === 'all') {
+        items.forEach(item => item.style.display = 'block');
       } else {
-        // ライトモードの場合の背景色
-        targetButton.style.backgroundColor = '#fefefe'; // ここにライトモードの背景色を指定してください
+        // それ以外の場合、対応するカテゴリの要素だけを表示
+        items.forEach(item => {
+          if (item.classList.contains(targetCategory)) {
+            item.style.display = 'block';
+          }
+        });
+      }
+
+      // ダークモードかどうかを検出する関数
+      function isDarkMode() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+
+      // ライトモードとダークモードで異なる背景色を設定する関数
+      function setButtonBackgroundColor(targetButton) {
+        if (isDarkMode()) {
+          // ダークモードの場合の背景色
+          targetButton.style.backgroundColor = '#293035'; // ここにダークモードの背景色を指定してください
+        } else {
+          // ライトモードの場合の背景色
+          targetButton.style.backgroundColor = '#fefefe'; // ここにライトモードの背景色を指定してください
+        }
+      }
+
+      categories.forEach(category => {
+        category.style.backgroundColor = 'initial'; // ボタンの背景色を初期化
+      });
+
+      const targetButton = document.querySelector(`.categories button[value="${targetCategory}"]`);
+      if (targetButton) {
+        setButtonBackgroundColor(targetButton); // テーマに応じた背景色を設定
       }
     }
-
-    categories.forEach(category => {
-      category.style.backgroundColor = 'initial'; // ボタンの背景色を初期化
-    });
-
-    const targetButton = document.querySelector(`.categories button[value="${targetCategory}"]`);
-    if (targetButton) {
-      setButtonBackgroundColor(targetButton); // テーマに応じた背景色を設定
-    }
-  }
   </script>
 </body>
+
 </html>
