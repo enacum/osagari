@@ -11,9 +11,9 @@ html {
   --highlight: #4f9e92;
   --grass: #fefefe;
   --shadow: #e7e7e7;
-  --light: #fff2f2;
+  --light: white;
   --popup: rgba(255, 255, 255, .4);
-  --backshadow: rgba(255, 255, 255, .2);
+  --backshadow: rgba(255, 255, 255, .5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +28,7 @@ html {
     --grass: #293035;
     --shadow: rgba(0, 0, 0, .3);
     --light: rgba(37, 41, 44, .8);
-    --popup: rgba(37, 44, 49, .7);
+    --popup: rgba(37, 44, 49, .8);
     --backshadow: rgba(44, 51, 57, .3);
   }
 }
@@ -97,11 +97,12 @@ h3 {
   font-family: "Zen Maru Gothic";
   color: var(--font);
   font-size: 1em;
-  padding: 1em;
+  padding-top: 1em;
   margin: 0;
 }
 
-p {
+p,
+.about li {
   font-size: 1em;
   line-height: 1.6em;
 }
@@ -183,49 +184,60 @@ li span {
   color: var(--highlight);
 }
 
-.article-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 0.5rem;
-}
-
-.item {
-  list-style: none;
+.about ul {
+  padding-left: 1em;
 }
 
 .shadow {
-  display: inline-block;
-  margin: 1em 0 1em 0;
-  width: 90%;
-  height: auto;
+  margin: 1em 0 1.5em 0;
   border-radius: 0.7em;
   box-shadow: 13px 13px 30px var(--shadow),
     -13px -13px 30px var(--light);
 }
 
-.card {
+strong {
+  color: var(--highlight);
+}
+
+.contents-wrapper {
+  margin: 2.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 2rem;
+}
+
+.contents-wrapper {
+  padding-left: 0;
+}
+
+.contents-wrapper li {
+  list-style: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
   background-color: var(--grass);
-  border: 0.05em solid var(--backshadow);
-  border-radius: 0.7em;
-  width: 100%;
-  height: auto;
 }
 
-.card img {
-  display: block;
-  border-radius: 0.7em 0.7em 0 0;
+.item img {
   width: 100%;
-  height: auto;
 }
 
-@media screen and (max-width: 563px) {
-  .article-wrapper {
-    display: block;
-  }
+.item h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Zen Maru Gothic";
+  font-size: 1.3rem;
+  color: var(--highlight);
+  margin: 0;
+  padding-top: 0;
+}
 
-  .shadow {
-    margin-left: 5%;
-  }
+.footnote {
+  border-radius: 15px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  padding: 15px 20px;
+  background-color: var(--grass);
 }
 
 footer {
