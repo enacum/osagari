@@ -1,8 +1,10 @@
-body , html {
+body,
+html {
   height: 100vh;
   padding: 0;
   margin: 0;
 }
+
 :root {
   --background: #f4f4f4;
   --font: #1E2327;
@@ -13,11 +15,13 @@ body , html {
   --popup: rgba(255, 255, 255, .4);
   --backshadow: rgba(255, 255, 255, .5);
 }
+
 @media (prefers-color-scheme: dark) {
   html {
     transition: .5s;
   }
-  :root{
+
+  :root {
     --background: #1E2327;
     --font: #D7D7D7;
     --highlight: #4f9e92;
@@ -29,36 +33,36 @@ body , html {
   }
 }
 
-@font-face {
-  font-family: "Zen Maru Gothic";
-  font-weight: black;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.woff) format("woff");
+.zen-maru gothic-light {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 300;
+  font-style: normal;
 }
-@font-face {
-  font-family: "Zen Maru Gothic";
-  font-weight: bold;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.woff) format("woff");
+
+.zen-maru gothic-regular {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-@font-face {
-  font-family: "Zen Maru Gothic";
-  font-weight: light;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.woff) format("woff");
+
+.zen-maru gothic-medium {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 500;
+  font-style: normal;
 }
-@font-face {
-  font-family: "Zen Maru Gothic";
-  font-weight: medium;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.woff) format("woff");
+
+.zen-maru gothic-bold {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  font-style: normal;
 }
-@font-face {
-  font-family: "Zen Maru Gothic";
-  font-weight: regular;
-  src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format("truetype"),
-       url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.woff) format("woff");
+
+.zen-maru gothic-black {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 900;
+  font-style: normal;
 }
+
 body {
   max-width: 700px;
   height: auto;
@@ -68,12 +72,14 @@ body {
   color: var(--font);
   background-color: var(--background);
 }
+
 @media screen and (max-width: 821px) {
   body {
     margin: 0 1rem;
     padding-top: 1rem;
   }
 }
+
 @media screen and (max-width: 499px) {
   body {
     margin: 0 0.5rem;
@@ -84,13 +90,15 @@ h2 {
   font-family: "Zen Maru Gothic";
   font-size: 1.1em;
 }
+
 .shadow {
   display: inline-block;
   margin: 1em 0 0 0;
   border-radius: 0.7em;
   box-shadow: 10px 10px 30px var(--shadow),
-             -10px -10px 30px var(--light);
+    -10px -10px 30px var(--light);
 }
+
 h3 {
   font-family: "Zen Maru Gothic";
   margin: 0;
@@ -100,31 +108,38 @@ h3 {
   border-radius: 0.7em;
   border: 0.15em solid var(--backshadow);
 }
+
 p {
   font-size: 0.9em;
   line-height: 1.6em;
 }
+
 a {
   font-family: "Zen Maru Gothic";
   color: var(--highlight);
 }
+
 ul {
   padding: 0;
   margin: 0.7em 0;
 }
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.1em;
 }
+
 .site-name {
-  font-family:  "Zen Maru Gothic";
+  font-family: "Zen Maru Gothic";
   color: var(--highlight);
 }
+
 nav {
   position: relative;
 }
+
 details[open] ul {
   position: absolute;
   top: 100%;
@@ -136,31 +151,45 @@ details[open] ul {
   z-index: 1000;
   font-size: 0.9em;
 }
+
 details ul {
   list-style: none;
 }
+
 details ul li {
-  margin-bottom: 10px; /* リストアイテムの下マージン */
+  margin-bottom: 10px;
+  /* リストアイテムの下マージン */
 }
+
 details ul li:last-child {
-  margin-bottom: 0; /* リストアイテムの下マージン */
+  margin-bottom: 0;
+  /* リストアイテムの下マージン */
 }
+
 details ul li a {
-  text-decoration: none; /* リンクの下線を非表示 */
-  color: var(--font); /* リンクの文字色 */
+  text-decoration: none;
+  /* リンクの下線を非表示 */
+  color: var(--font);
+  /* リンクの文字色 */
 }
+
 details ul li a:hover {
-  color: var(--highlight); /* リンクにホバーした時の文字色 */
+  color: var(--highlight);
+  /* リンクにホバーした時の文字色 */
 }
+
 summary {
   display: block;
 }
+
 summary::-webkit-details-marker {
   display: none;
 }
+
 li span {
   color: var(--highlight);
 }
+
 .banner {
   width: 200px;
   height: 40px;
@@ -169,79 +198,94 @@ li span {
 .about-here {
   padding-bottom: 1em;
 }
+
 .about-here {
   font-size: 1.15em;
   padding-bottom: 1em;
 }
+
 .whats-this {
   color: var(--highlight);
 }
+
 .about-here details {
   display: inline-block;
   list-style: none;
   cursor: pointer;
 }
+
 .about-here details span {
   font-family: "Zen Maru Gothic";
   color: var(--highlight);
 }
+
 .infomation {
   background-color: var(--grass);
   padding: 0.5em 1em;
   margin: 1em 0 1.5em 0;
   border-radius: 0.7em;
 }
+
 .news {
   padding: 0.5em 1em;
   margin: 1em 0 1.5em 0;
   border-radius: 0.7em;
   box-shadow: 13px 13px 30px var(--shadow),
-             -13px -13px 30px var(--light);
+    -13px -13px 30px var(--light);
   border: 0.05em solid var(--popup);
 }
+
 .news ul {
   padding: 0;
 }
+
 .news li {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 1em;
 }
+
 .date {
   color: var(--highlight);
 }
+
 .news-list {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
+
 .news-list a {
   cursor: pointer;
   text-decoration: none;
 }
+
 .news-list p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.1em;
-    margin: 0 0 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  margin: 0 0 1em 0;
 }
+
 .news-list p::after {
-    transform: translateY(10%) rotate(-45deg);
-    width: 7px;
-    height: 7px;
-    margin-left: 10px;
-    border-bottom: 1.5px solid var(--highlight);
-    border-right: 1.5px solid var(--highlight);
-    content: '';
+  transform: translateY(10%) rotate(-45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 1.5px solid var(--highlight);
+  border-right: 1.5px solid var(--highlight);
+  content: '';
 }
+
 footer {
   display: flex;
   flex-flow: column;
   align-items: center;
   height: auto;
 }
+
 .copyright {
   font-size: 1em;
 }
