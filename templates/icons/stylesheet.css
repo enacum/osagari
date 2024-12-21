@@ -210,11 +210,15 @@ strong {
   padding-left: 0;
 }
 
-.contents-wrapper li {
+.item {
   list-style: none;
   padding: 1rem 2rem;
   border-radius: 10px;
   background-color: var(--grass);
+}
+
+.highback {
+  background-color: var(--shadow);
 }
 
 .item img {
