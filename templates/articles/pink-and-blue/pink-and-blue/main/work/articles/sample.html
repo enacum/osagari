@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>サンプルページ</title>
+  <meta name="description" content="サンプルページです">
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="shortcut icon" href="../../images/icon/icon.jpg">
+  <link rel="apple-touch-icon" href="../../images/icon/icon.jpg">
+  <link rel="icon" type="image/png" href="../../images/icon/icon.jpg">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:title" content="ページタイトル">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="ページURL">
+  <meta property="og:description" content="ページの説明">
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="../../images/icon/icon.jpg">
+</head>
+<body>
+  <header>
+    <a href="../../index.html" title="ホーム"><p class="site-name">サイト名</p></a>
+    <p class="tab">
+      <a href="../../index.html" class="rest" title="note">note</a><a href="../index.html" title="work"><span>work</span></a>
+    </p>
+  </header>
+  <main>
+    <article>
+      <h1>サンプルページ</h1>
+      <a title="説明のページへ" href="description.html">[link] 別のページへのリンクなど</a>
+      <p class="tag">2024/01/21</p>
+      <h2>イラストタイトルなど</h2>
+      <p>imgタグにid="normal"を付けると、一枚ずつ決まった横幅で表示されます。またid="banner"は200×40のサイズで表示されるよう設定しています。</p>
+      <p>以下では画像をnormal、バナーをbannerで表示した例です。詳しい使い方はコード上で確認してください。</p>
+      <a href="../images/sample/img1_1.jpg" title="1:1の画像"><img id="normal" src="../images/sample/img1_1.jpg"></a>
+      <a href="../images/sample/img3_4.jpg" title="3:4の画像"><img id="normal" src="../images/sample/img3_4.jpg"></a>
+      <div class="caption">
+        <p>キャプション。<a href="../index.html" title="workのトップに戻る">リンク</a>貼れます。</p>
+      </div>
+      <p>バナー<br>
+      <a href="../../images/icon/banner.jpg" title="バナー"><img id="banner" src="../../images/icon/banner.jpg"></a></p>
+      <p>文字の装飾については<a href="../../articles/sample.html" title="notesのサンプルページ">noteのサンプルページ</a>で
+        紹介しているものと共通する部分が多いです。（使用が想定されない装飾は対応していないことあります。）</p>
+      <p class="tag"><a href="../index.html?selectedButton=sample">&#035;サンプル</a></p>
+    </article>
+    <div class="end">
+      <p><a class="home" href="../index.html">│ home</a></p>
+    </div>
+  </main>
+  <footer>
+    <div class="copyright">
+      <small>© yyyy サイトの著作者名</small>
+    </div>
+  </footer>
+</body>
+</html>

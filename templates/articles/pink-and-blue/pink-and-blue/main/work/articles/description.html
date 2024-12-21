@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>説明</title>
+  <meta name="description" content="workページの説明">
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="shortcut icon" href="../../images/icon/icon.jpg">
+  <link rel="apple-touch-icon" href="../../images/icon/icon.jpg">
+  <link rel="icon" type="image/png" href="../../images/icon/icon.jpg">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:title" content="ページタイトル">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="ページURL">
+  <meta property="og:description" content="ページの説明">
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="../../images/icon/icon.jpg">
+</head>
+<body>
+  <header>
+    <a href="../../index.html" title="ホーム"><p class="site-name">サイト名</p></a>
+    <p class="tab">
+      <a href="../../index.html" class="rest" title="note">note</a><a href="../index.html" title="work"><span>work</span></a>
+    </p>
+  </header>
+  <main>
+    <article>
+      <h1>説明</h1>
+      <p class="tag">2024/01/21</p>
+      <p>workページはイラストの掲載を想定してデザインされています。コードの書き換えるべき部分については<a href="../../articles/description.html" title="noteページ及びコードの説明">こちら</a>を参照してください。</p>
+      <h2>workのトップページ</h2>
+      <img id="normal" src="../images/description/toppage.jpg" alt="workのトップページ">
+      <p>トップページはPCだと大体３枚ずつ、スマホ縦長表示だと１〜２枚ずつ横並びで表示されます。画面の横幅に合わせて枚数が変わります。サムネイル画像として5:7の比率の画像を使う必要があります。</p>
+      <p>サムネイルの下にはタイトルの表示を想定した文字（＃サンプル　など）を記載しています。</p>
+      <img id="normal" src="../images/description/category.jpg" alt="カテゴリボタンを押した状態">
+      <p>また、カテゴリ一覧（虫眼鏡アイコンを押すと表示されます）で特定のカテゴリをクリックすると、そのカテゴリについての説明が表示されます。<br>
+        これはカテゴリボタンのonclick、valueがカテゴリ説明のidと対応するためです。<br>
+      例えば、カテゴリボタンのonclick、valueにabcdと書かれていた場合、id="selectedCategoryText-abcdと書かれているカテゴリ説明文が表示されます。</p>
+      <h2>記事ページ</h2>
+      <p><a href="sample.html" title="work記事ページサンプル">サンプルページ</a>を参照してください。</p>
+      <p class="tag"><a href="../index.html?selectedButton=description">&#035;説明</a></p>
+    </article>
+    <div class="end">
+      <p><a class="home" href="../index.html">│ home</a></p>
+    </div>
+  </main>
+  <footer>
+    <div class="copyright">
+      <small>© yyyy サイトの著作者名</small>
+    </div>
+  </footer>
+</body>
+</html>

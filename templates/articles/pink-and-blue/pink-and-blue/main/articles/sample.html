@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>サンプルページ</title>
+  <meta name="description" content="サンプルページです">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="shortcut icon" href="../images/icon/icon.jpg">
+  <link rel="apple-touch-icon" href="../images/icon/icon.jpg">
+  <link rel="icon" type="image/png" href="../images/icon/icon.jpg">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:title" content="サンプルページ">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="※このページへのリンクを入力する">
+  <meta property="og:description" content="サンプルページです">
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="../images/icon/icon.jpg">
+</head>
+<body>
+  <header>
+    <a href="../index.html" title="ホーム"><p class="site-name">サイト名</p></a>
+    <p class="tab">
+      <a href="../index.html" title="全ての記事"><span>note</span></a><a href="../work/index.html" class="rest" title="work">work</a>
+    </p>
+  </header>
+  <main>
+    <article>
+      <h1>サンプルページ</h1>
+      <p class="tag">2024/01/21</p>
+      <div class="index">
+        <h4 class="index-header">目次</h4>
+        <ol>
+          <li><a href="#text" title="テキスト表示">テキスト表示</a></li>
+          <li><a href="#link" title="リンクの表示">リンクの表示</a></li>
+          <li><a href="#img" title="画像の表示">画像の表示</a></li>
+          <li><a href="#movie" title="動画を埋め込む">動画を埋め込む</a></li>
+        </ol>
+      </div>
+      <h2 id="text">①テキスト表示</h2>
+      <div class="footnote">
+        <p>テキストをちょっと囲んで表示したいときはclass="footnote"を使います。</p>
+      </div>
+      <p><strong>strongタグ</strong>を使うと文字が色付きになります。</p>
+      <p>↓detailsはデフォルトで背景色が変わります</p>
+      <details>
+        <summary>クリックで内容を表示</summary>
+        <h2>タイトル</h2>
+        <p>ネタバレになりそうな内容を隠すときなどに使います。</p>
+      </details>
+      <details id="unti">
+        <summary>背景色無しver</summary>
+        <p>id="unti"を付けると背景色無しになります。</p>
+      </details>
+      <h2 id="link">②リンクの表示</h2>
+      <p>テキスト内でaタグを使うと色付きで表示されます→<a href="https://enacum.me/" title="enacum.のサイト">著作者（えなくん）のサイト</a><br>
+      リンクカード表示もできます↓</p>
+      <a class="link-card" href="https://enacum.me/" title="enacum.のサイト"><h4 class="link-header">link</h4>著作者（えなくん）のサイト</a>
+      <h2 id="img">③画像の表示</h2>
+      <p>画像の表示は1枚と2枚で表示が異なります。（上限2枚まで）</p>
+      <div class="image-container">
+        <div class="image-wrapper">
+        <a title="" href="../images/sample/img1_1.jpg"><img src="../images/sample/img1_1.jpg"></a>
+        </div>
+      </div>
+      <div class="caption">
+        <p>1枚のとき</p>
+      </div>
+      <div class="images-container">
+        <div class="images-wrapper">
+          <a title="" href="../images/sample/img1_1.jpg"><img src="../images/sample/img1_1.jpg"></a>
+        </div>
+        <div class="images-wrapper">
+          <a title="" href="../images/sample/img3_4.jpg"><img src="../images/sample/img3_4.jpg"></a>
+        </div>
+      </div>
+      <div class="caption">
+        <p>2枚のとき</p>
+      </div>
+      <h2 id="movie">④動画を埋め込む</h2>
+      <p>Youtube動画は以下の方法で埋め込むことができます。
+        <ol>
+          <li>動画の共有ボタンを押す</li>
+          <li>「埋め込む」を選ぶ</li>
+          <li>「width="560" height="315"」の部分を「id="youtube"」に書きかえる</li>
+        </ol>
+      </p>
+      <iframe id="youtube" src="https://www.youtube.com/embed/DAiWR7BKqxY?si=9jv2REiilzkrRlQ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="caption">
+        <p>寝起きヤシの木 / シナモン【歌ってみた】</p>
+      </div>
+      <p class="tag"><span><a href="../index.html?selectedButton=sample">&#035;サンプル</a></span></p>
+    </article>
+    <div class="end">
+      <p><a class="home" href="../index.html">│ home</a></p>
+    </div>
+  </main>
+  <footer>
+    <div class="copyright">
+      <small>&copy; 2024 サイトの著作者名</small>
+    </div>
+  </footer>
+</body>
+</html>
