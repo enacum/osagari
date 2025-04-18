@@ -86,6 +86,11 @@ body {
   }
 }
 
+li,
+p {
+  letter-spacing: 0.8px;
+}
+
 h2 {
   font-family: "Zen Maru Gothic";
   color: var(--highlight);
