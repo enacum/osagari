@@ -67,7 +67,7 @@ body {
   max-width: 700px;
   height: auto;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   font-family: "Apple SD Gothic Neo", "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
   color: var(--font);
   background-color: var(--background);
