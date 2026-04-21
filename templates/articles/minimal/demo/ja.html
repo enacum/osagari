@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <title>デモページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="pagetop">
+    <header>
+      <button onclick="window.location.href = '../../../../index.html'">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="24" />
+          <path
+            d="M24 13L12 23.4359H15.8571V34H24H32.1429V23.4359H36L24 13Z"
+            stroke-width="2.5"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <a href="#pagetop">
+        <h1>デモページ (H1)</h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <span><a href="ja.html">日</a></span>
+          </li>
+          <li><a href="en.html">英</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <section>
+          <h2>目次や要約、注意事項など（H2）</h2>
+          <p>
+            sectionで囲んだH2要素は通常のH2と見た目が異なります。このsectionは目次や要約、注意事項での利用を想定したデザインになっています。
+          </p>
+        </section>
+        <h2>テキストの表示 (これもH2です。)</h2>
+        <p>こんにちは。これはp要素で囲まれた通常のテキストの表示です。</p>
+        <h3>H3です。</h3>
+        <p>
+          <a
+            href="https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a"
+            title="mdn web docs のアンカーに関するリファレンス"
+            >アンカー</a
+          >はこのような表示です。
+        </p>
+        <ul>
+          <li>順序なしリストです</li>
+          <li>and this too.</li>
+        </ul>
+        <ol>
+          <li>順序ありリストです</li>
+          <li>and this too.</li>
+        </ol>
+        <details>
+          <summary>これは開閉可能なトグルリストです。</summary>
+          こんにちは！
+        </details>
+        <div class="linkcard">
+          <h2>リンク</h2>
+          <p>linkcardとlinkのクラスを使ってリンクカード風の表示が可能です。</p>
+          <a class="link" href="https://enacum.me/">ホームへもどる</a>
+        </div>
+        <h2>画像の表示例</h2>
+        <img
+          src="assets/nekocyanPAKE4716-455_TP_V4.jpg"
+          alt="ピンク背景の花に囲まれた青い瞳のラグドール猫のフリー素材"
+        />
+        <div class="images">
+          <img
+            src="assets/nekocyanPAKE4716-455_TP_V4.jpg"
+            alt="ピンク背景の花に囲まれた青い瞳のラグドール猫のフリー素材"
+          />
+          <img
+            src="assets/nekocyanPAKE4737-458_TP_V4.jpg"
+            alt="ピンクの布にのる、前足をちょこんと出すラグドールのフリー写真素材"
+          />
+          <img
+            src="assets/nantoshi21PAR519902088_TP_V4.jpg"
+            alt="ガラス越しに外を見つめる飼い猫の窓辺での一瞬のフリー写真素材"
+          />
+        </div>
+        <p class="caption">
+          画像を複数枚横並びにする場合は、imagesのクラスを使用します。（これは.captionを使ったキャプション風表示です。）
+        </p>
+        <figure>
+          <img
+            src="assets/nekocatIMGL64071993_TP_V4.jpg"
+            alt="突然のバグに目を丸くするノートパソコンの前の猫のフリー写真素材"
+          />
+          <figcaption>
+            突然のバグに目を丸くするノートパソコンの前の猫のフリー写真素材（これはfigcaptionです）
+          </figcaption>
+        </figure>
+        <section>
+          <h2>注意事項</h2>
+          <p>
+            このテンプレートで使用している写真素材は、ぱくたそ［
+            <a href="https://www.pakutaso.com" title="フリー素材「ぱくたそ」"
+              >https://www.pakutaso.com</a
+            >
+            ］のフリー素材を利用しています。二次配布物の受領者がこの素材を継続して利用する場合は、
+            ぱくたそ公式サイトからご自身でダウンロードしていただくか、ぱくたそのご利用規約［
+            <a
+              href="https://www.pakutaso.com/userpolicy.html"
+              title="フリー素材「ぱくたそ」の利用規約"
+              >https://www.pakutaso.com/userpolicy.html</a
+            >
+            ］に同意していただく必要があります。
+            同意いただけない場合は素材のご利用はできませんのでご注意ください。
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <small>@ 2026 this is small</small>
+    </footer>
+  </body>
+</html>
