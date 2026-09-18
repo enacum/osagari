@@ -1,224 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
+    <title>制作メモ</title>
+    <meta name="description" content="サイト制作中の気付きメモ。" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="stylesheet.css?250418" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/android-chrome-256x256.png"
+    />
+    <meta property="og:site_name" content="おさがり" />
+    <meta property="og:title" content="制作メモ" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://osagari.enacum.me/notes/index.html"
+    />
+    <meta property="og:description" content="サイト制作中の気付きメモ。" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="../images/icon-512x512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>制作メモ</title>
-  <meta name="description" content="サイト制作中の気付きメモ。">
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="stylesheet.css?250418">
-  <link rel="shortcut icon" href="../images/favicon.ico">
-  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="../images/android-chrome-256x256.png">
-  <meta property="og:site_name" content="おさがり">
-  <meta property="og:title" content="制作メモ">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://osagari.enacum.me/notes/index.html">
-  <meta property="og:description" content="サイト制作中の気付きメモ。">
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:image" content="../images/icon-512x512.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <div class="site-name">
-      <a title="ホーム" href="../index.html">
-        <h1>おさがり</h1>
-      </a>
-    </div>
-    <nav>
-      <details>
-        <summary>メニュー</summary>
-        <ul>
-          <li><a href="../index.html">ホーム</a></li>
-          <li><a href="../templates/index.html" title="テンプレート">テンプレ</a></li>
-          <li><span>メモ</span></li>
+  <body>
+    <header>
+      <div class="site-name">
+        <a title="ホーム" href="../index.html">
+          <h1>おさがり</h1>
+        </a>
+      </div>
+      <nav>
+        <details>
+          <summary>メニュー</summary>
+          <ul>
+            <li><a href="../index.html">ホーム</a></li>
+            <li>
+              <a href="../templates/index.html" title="テンプレート"
+                >テンプレ</a
+              >
+            </li>
+            <li><span>メモ</span></li>
+          </ul>
+        </details>
+      </nav>
+    </header>
+    <main>
+      <div class="top-container">
+        <h2>制作メモ</h2>
+        <p>いろんな気付きメモ</p>
+      </div>
+      <section class="article-container">
+        <ul class="article-wrapper">
+          <li class="item" id="movetoastro">
+            <div class="card">
+              <div class="heading">
+                <p class="date">2026/09/18</p>
+                <h3><span class="label">新規</span>Astroに移行した</h3>
+              </div>
+              <details open class="content">
+                <summary>
+                  <p>
+                    Astroを使ったら、サイト運営がどう変化したか。
+                  </p>
+                </summary>
+                <h4></h4>
+                <p>メインの個人サイトはHTML&CSS、JavaScript、PHPなどで作成していましたが、このたび<span class="strong">JavaScriptウェブフレームワーク</span>というものを使ってみることにしました。</p>
+                <p>いままではサイトの更新やデザインの変更などでまあまあ手間がかかっていましたが、それらの負担軽減が当初の目的です。それから、「フレームワーク」というものはサイト制作で一般的に使われているものっぽかったので、<span class="strong">私もそろそろフレームワークってやつを使ってみるか……</span>と思いました。</p>
+                <p>※ちなみにJavaScriptとPHPはほぼチャットAIに書てもらったので、自分で理解して書いたわけではありません。所持スキルと言えるのはHTML・CSS基礎くらいです。</p>
+                <p>前提ですが、このサイトはあくまで<span class="strong">制作メモを共有するもの</span>です。正確な理解を元に書いている記事ではないので、以下につづく文章も「書き手の個人的な解釈」として読んでください。</p>
+                <h4>目次</h4>
+                <ul>
+                  <li><a href="#what-is-astro">Webフレームワーク - Astroってなに？</a></li>
+                  <li><a href="#what-astro-provides">Astroは何を提供してくれるのか</a></li>
+                  <li><a href="#building-challenges">構築するまでがめちゃくちゃ大変</a></li>
+                  <li><a href="#sitemap-issue">Astroで生成したサイトマップ、なぜか読み込まれない（未解明）</a></li>
+                  <li><a href="#netlify-benefits">Netlifyでサーバー代が掛からなくなった</a></li>
+                  <li><a href="#conclusion">締め</a></li>
+                </ul>
+                <h4 id="what-is-astro">Webフレームワーク - Astroってなに？</h4>
+                <p>わたしが事前に知っていたのは、CSSフレームワークですね。以下の記事でそれがどういうものなのか知りました。</p>
+                <a href="https://note.com/shizimiz/n/n5da6f40e3492" target="_blank" rel="noopener noreferrer">久々に個人サイトを作った記録｜しじみ</a>
+                <p>こちらは著者自身の個人サイト制作の経緯が書かれている記事ですが、文中で紹介されているCSSフレームワークのひとつが<a href="https://getuikit.com/" target="_blank" rel="noopener noreferrer">UIkit</a>です。</p>
+                <p>これはですね、</p> 
+                <ol>
+                  <li>UIkitをダウンロードする</li>
+                  <li>自分のウェブプロジェクトに接続する</li>
+                  <li>UIkitのルール通りにコードを書く</li>
+                </ol>
+                <p>という方法で使うものらしい（多分）。それによってどうなるかというと、<span class="strong">HTMLを書くだけで、UIkitに入っている「デザイン」を呼び出せる</span>、という状態になるっぽい</span>（多分）</span>。つまり、他人が作ったデザインを簡単に借りることができるみたいです。</p>
+                <h4 id="what-astro-provides">Astroは何を提供してくれるのか</h4>
+                <p>私が使ったフレームワークはCSSではなく、JavaScriptフレームワークのAstroというものです。</p>
+                <a href="https://astro.build/" target="_blank" rel="noopener noreferrer">Astro</a>
+                <p>使い方は「Astroを自分のプロジェクトにインストールする→Astroのルール通りに書く」という感じ。</p>
+                <p>Astroは一言でいうと<span class="strong">「いろんな部分を自動化することができ、整理もされるので、更新時の手間を減らしてくれる」</span>という機能を持っています。</p>
+                <p>前述した通り、サイトを更新する際は「これいちいちやらなきゃいけないの？」と思うような手間がいくつか出てきます。</p>
+                <ul>
+                  <li>メモアプリなどで作成した記事を、HTMLに変換する。</li>
+                  <li>画像をWebPに変換する（軽量化のため）。</li>
+                  <li>記事一覧に新しい記事を追加</li>
+                  <li>RSSに新しい記事を追加</li>
+                  <li>全ページ共通のコードを、新しいページを作るたびにコピペする</li>
+                </ul>
+                <p>上記は私がいままで記事を更新するたびにやっていて、<span class="strong">Astroに移行してから必要なくなった手間</span>です。つまり、これらをすべて自動化する術を提供してくれます。助かる……めっちゃ楽……</p>
+                <p>さらに副産物として、Astroのチュートリアル通りに作っていると「githubを使っためちゃくちゃ楽なサーバーアップロード方法」とか「コードの内容やファイル構造を単純化するためのやりかた」「ほぼ無料で使えるサーバー（後述）」などの知識も得られる。ありがてぇ……</p>
+                <p>メリットをより具体的に、以下にまとめます。</p>
+                <ul>
+                  <li>コンテンツ管理が便利になる：<span class="strong">コンテンツ情報</span>（タイトル、日付、ジャンルなど）<span class="strong">を一回書くだけで、複数ページに自動で反映</span>させる仕組みを作ることができる。</li>
+                  <li>軽量化が簡単：ルール通りに書くことで、画像を自動的にWebP形式に変換する（そのほかにも軽量化要素あり）。</li>
+                  <li>コンポーネント化できる：<span class="strong">ページの要素をパーツ分けして管理できる</span>。ヘッダー、ナビゲーションメニュー、フッターなど、複数ページに共通する要素をパーツのように管理することができ、<code>&lt;header /&gt;</code>のような簡単な記述で呼び出すことができる。</li>
+                </ul>
+                <h4 id="building-challenges">構築するまでがめちゃくちゃ大変</h4>
+                <p>しかし、私はHTMLくらいしか真面目に座学していない人間。<span class="strong">チュートリアルを理解し、自分のサイトに導入するまでに数ヶ月かかりました。</span></p>
+                <p>シンプルなAstroサイトなら１ヶ月で作ることはできました。でもHTML&CSS版サイトの機能やデザインを再現（というか移行）するのに、試行錯誤含め＋２ヶ月くらいは掛かってるかな……？もちろん単に時間がかかっただけではなく、めちゃくちゃ頭が疲れたし、終わりが見えなかった……</p>
+                <p>たぶん、サイト制作経験があって「新しいサイトを作るぞ」という人ならシンプルにチュートリアルで作ったサイトを使えるので、もっと楽だと思います……私はいろんなことをやりすぎたかもしれん。</p>
+                <p>Astroのコンセプト的に「（言語的に）シンプルで、軽量なサイトが作れる」という印象があったので、「デザインやコードをシンプルに作り直したい」みたいな欲が出てしまった。しかし、これまで散々初心者なりに改良してきて <span class="strong">統一されていない記述・複雑なdiv構造・理解しきれてないJavaScript要素</span> のあるサイトをすべてシンプル化するのは難しかった。</p>
+                <p>記事ページ・CSSも含め、全てのコードを見直すことになりました。しんどかった……でもいつかは見直さなきゃな、という思いはあったので、結果的にはこのような機会があって良かったと思います。</p>
+                <h4 id="sitemap-issue">Astroで生成したサイトマップ、なぜか読み込まれない（未解明）</h4>
+                <p>創作系個人サイトを作っている人はサイトマップを作ってる人は多くないかもしれませんが、私のメインのサイトは検索避けをしていません。むしろ検索エンジンに引っ掛かるようにしています。</p>
+                <p><a href="https://developers.google.com/search?hl=ja" target="_blank" rel="noopener noreferrer">Google Search Console</a>に自分のサイトのページ情報を送信することで、正式なページURLが検索エンジンに表示されるようになっています。この「ページ情報」つまり記事一覧みたいなものをサイトマップと呼び、これもAstroを使えば（RSSやサイトに表示される記事一覧と同じように）自動的に生成することができます。</p>
+                <p>しかし、なぜか分からないのですが私の場合は<span class="strong">４ヶ月近く経ってもなかなかページ情報が読み込まれませんでした</span>。原因がぜんぜんわからん……</p>
+                <p>同じ状況に陥っている人も見つからず、AIにコードを見せても「コードは問題ない」と言われ、いまだに何もわからん。なんでやろ。未解決問題。</p>
+                <h4 id="netlify-benefits">Netlifyでサーバー代が掛からなくなった</h4>
+                <p>AstroのチュートリアルではNetlifyというサービスを使ってサイトを公開するところまで練習できるのですが、このNetlifyというやつ、サーバー代がほぼ掛からん。</p>
+                <p><a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Push your ideas to the web | Netlify</a></p>
+                <p>いまだにどういう役割のサービスなのかよく分かっていないのですが、見た感じ「サイト（またはアプリ）の構築から公開までが簡単にできますよ」みたいな紹介がされています。</p>
+                <p><a href="https://www.netlify.com/pricing/" target="_blank" rel="noopener noreferrer">Netlifyの料金体系</a>については（今後、変更もあると思うので）まず公式情報を確認していただきたいのですが、いま（2026/09/18現在）のところ創作系個人サイトくらいの規模なら無料枠で公開できそうな印象です。<a href="https://docs.github.com/ja/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">github pages</a>に似た感じ。</p>
+                <p>「頻繁に更新（デプロイ）されるサイト」と「閲覧数が多いサイト」は有料になりそうです。でも週１〜２回更新、個人サイト規模ならほぼ問題なく使えるかと。</p>
+                <p></p>てがろぐなどを使っていて、すでに手軽な更新が頻繁にできている人はわざわざAstroに移行する必要もないと思うので、多くの人にメリットがありそう。</p>
+                <p><span class="strong">注意事項としては、URLが変わる場合があります</span>。独自ドメインを取得している人であれば「サーバー代＋独自ドメイン代」が「独自ドメイン代のみ」になるのでめちゃくちゃコストダウンするだけなのですが、そうでない人はURLが「https://任意の文字列.netlify.app」のようになりますね。この点も新規でサイトを作る場合ならスルーできる問題です。</p>
+                <p>私はいままではレンタルサーバーを有料（年6600円くらいかな？）で借りていて、サーバーのプランで「独自ドメインが無料で使える」という状態でした。それが<span class="strong">サーバー代無料、独自ドメイン代のみ（年1000円くらい）</span>になるようです。まだレンタルサーバー契約期間だから、独自ドメインの支払いは始まってないんですけどね。</p>
+                <h4 id="conclusion">締め</h4>
+                <p>【Astroを使ったらどうなったか】の話は以上になります。次回は【Astro構築中につまづいたこと、勉強したこと】などをまとめようと思います。アリーヴェデルチ！（さよならだ）</p>
+              </details>
+            </div>
+          </li>
+          <li class="item" id="howtomake_articles">
+            <div class="card">
+              <div class="heading">
+                <p class="date">2025/04/18</p>
+                <h3>しっくりくる文章を書く</h3>
+              </div>
+              <details class="content">
+                <summary>
+                  <p>
+                    納得いく文章をすんなり書けるようにするための、私の考え方メモ。
+                  </p>
+                </summary>
+                <h4>書く内容が出てこないとき</h4>
+                <ul>
+                  <li>
+                    好きなものの感想を書く
+                    <p>
+                      好きなものの話であれば言葉が出てきやすい。詳しく語れなくてもいいので、好きな部分や誰かに広めたい部分を書いていく。読み返したときに自分でも楽しめる文章があると、サイト運営自体も続けやすい。
+                    </p>
+                    <p>
+                      逆に、読み返したときに「つまんないな〜」「自分性格悪いな……」と思ってしまうようなジャンルは書かない。私の場合、「批評的な感想」「日記（卑屈な内容になりがち）」はいい感じに書けないので基本的には避けるようにしている。
+                    </p>
+                  </li>
+                  <li>
+                    文章がまとまらない場合
+                    <p>
+                      まずは書きたいことを箇条書きにする。次に、箇条書きを元にして文を書いてみる。書いた文が納得いかなかったら、それを下書きにしてまた文を書く。
+                    </p>
+                    <p>
+                      あるいは書けそうな気分になるまでそのまま置いておく。何日か置いておくと頭の中が整理されて、書く順序を入れ替えたり必要のない部分を省いたりしやすくなる。
+                    </p>
+                  </li>
+                </ul>
+                <h4>気にしすぎなくていいこと</h4>
+                <ul>
+                  <li>
+                    読みやすさを意識しすぎない
+                    <p>
+                      例えば「です・ます口調」と「だ・である口調」は混ざらないほうが読みやすいかもしれないが、混ざっている状態が（自分の口調として）自然だと感じる場合は混ざったままでもいい。
+                    </p>
+                    <p>
+                      また推しや好きな作品について話すときは、「みなさんご存知の通り、うちの推しは天才ですが……」とみんなが知っている前提で書き始めてもいい。
+                    </p>
+                    <p>
+                      文章のルールを守ったり、いろんな読み手を意識することよりも「言いたいことが言えているという納得感」を優先したほうが、ちゃんと書けたという実感と満足感があり続きやすいと思う。
+                    </p>
+                  </li>
+                  <li>
+                    考察の正確性にこだわりすぎない
+                    <p>
+                      作品の考察をするとき、自分の捉え方や感じ方が「正しいかどうか」を気にしすぎるとなかなか書きづらいと思う。確かに作者が伝えたい「正しい意図」はあるかもしれないが、そこを追い求めると作品や作者、背景情報などの知識量の問題になってくる。
+                    </p>
+                    <p>
+                      それよりは「自分の印象に残った部分について、自分はどう捉えたか」というテーマで書きながら作品から受け取れたメッセージについて考えるほうが、消費者として普通の在り方だと思っている。
+                    </p>
+                    <p>
+                      「別の作品をインスパイアしているかも」と思ったときは、自分の記憶が合っているか確認するためにインスパイア元作品を確認するようにしているが、基本的には思ったことを書けばいい。
+                    </p>
+                  </li>
+                  <li>
+                    修正・削除・前言撤回を気軽にする
+                    <p>
+                      言いたいことがちゃんと言えていない記事を削除したり、前回の記事で宣言したことと違うことをしたら今回の記事で撤回したりは普通にする。
+                    </p>
+                    <p>
+                      書いた時点ではベストを尽くしていたし、今の時点では思考も判断力も成長して変わったのだから、その時々の考えに合わせて柔軟でいる。
+                    </p>
+                  </li>
+                </ul>
+                <h4>環境を整える</h4>
+                <ul>
+                  <li>
+                    CSSを調整する・制作環境を改善する
+                    <p>
+                      段落と段落の間隔やフォントサイズなど、気になるところがあればマメにCSSを調整する。文章を書くのに使っているアプリなども、使いやすくて気に入るものを使う。
+                    </p>
+                    <p>
+                      書くときも見せるときも読むときも、納得いく仕上がりに整えておくと満足度が高いし、楽しみながらブログを続けられると思う。
+                    </p>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </li>
+          <li class="item" id="100qna">
+            <div class="card">
+              <div class="heading">
+                <p class="date">2024/09/17</p>
+                <h3>『個人サイト管理人に100の質問』に回答しました</h3>
+              </div>
+              <details class="content">
+                <summary>
+                  <p>100質テンプレを３つお借りしました。</p>
+                </summary>
+                <p>
+                  <a
+                    href="https://enacum.me/notes/articles/100qna.html"
+                    title="個人サイト管理人に100の質問　回答"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >100の質問　回答（個人サイトに遷移します）</a
+                  >
+                </p>
+                <p>
+                  100質テンプレを見ていたら、サイトやコンテンツ制作に関する悩みなどの質問もあったので、私も回答させていただきました。
+                </p>
+                <p>
+                  質問被りなどを除いて98問回答したので、ご興味があればご覧になってください。
+                </p>
+              </details>
+            </div>
+          </li>
+          <li class="item" id="webp">
+            <div class="card">
+              <div class="heading">
+                <p class="date">2024/06/02</p>
+                <h3>画像はWebp形式がおすすめ</h3>
+              </div>
+              <details class="content">
+                <summary>
+                  <p>画像サイズが軽くなるよ</p>
+                </summary>
+                <p>
+                  画像サイズが重くてサイトの読み込みが遅い、と思っている人にはWebPをおすすめします。<br />WebP（ウェッピー）とは、PNGやJPEGに代わる新しい画像形式です。
+                </p>
+                <p>
+                  画像をWebPに変換すると画質をほぼ保ったまま画像データが軽くなります。<br /><strong
+                    >デメリット</strong
+                  >としては「WebP形式に対応しているサービス」は見たことがないので、投稿サイト・SNS・アプリなどで使いたい画像はPNGまたはJPEGデータを別に保管しておく必要があるということです。
+                </p>
+                <p>
+                  公式的な変換方法は<a
+                    title="Squppsh - 画像変換"
+                    href="https://squoosh.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Squoosh</a
+                  >に画像をドラッグ&ドロップし、圧縮形式「WebP」を選んだら右下の保存ボタンを押すだけです。
+                </p>
+                <p>
+                  サイトに載せる画像のうち共有する必要がないものはWebPにして、バナーなどはPNGやJPEG形式を使い、PCにはPNGまたはJPEGで保管しておくと便利です。
+                </p>
+              </details>
+            </div>
+          </li>
+          <li class="item" id="reference">
+            <div class="card">
+              <div class="heading">
+                <p class="date">2024/06/02</p>
+                <h3>【HTML&CSS追加】お世話になったサイト</h3>
+              </div>
+              <details class="content">
+                <summary>
+                  <p>HTML / CSS / JavaScriptで参考にしたサイト</p>
+                </summary>
+                <h3>HTML&CSS</h3>
+                <ul>
+                  <li>
+                    <a
+                      title="Webクリエータになるための壮絶な戦いが今はじまる。"
+                      href="https://creatorquest.jp/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >CreatorQuest</a
+                    >
+                    <p>
+                      めっちゃおすすめ。ほぼHTMLしか学べないが、楽しかったしわかりやすかった。
+                    </p>
+                    <p>
+                      「Webクリエータになるための壮絶な冒険が今はじまる。」とトップに書いてあるが、勉強中もこのノリが続く。かといって鬱陶しいわけでもなく本当に楽しい。冒険の続きが気になる展開もある。
+                    </p>
+                    <p>
+                      説明が細かめなので、コードの意味を理解しやすい。ただ<strong>デメリット</strong>として、ここで学ぶ書き方では実践で使うには不十分なこともある。どちらにせよCSSのレッスンがないので他の教材と併用することになる。
+                    </p>
+                  </li>
+                  <li>
+                    <a
+                      title="プログラミングで人生の可能性を広げよう"
+                      href="https://prog-8.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >progate</a
+                    >
+                    <p>
+                      簡単でざっくりと学べる。無料で学びたいなら他にも教材はあるが、ちょっと課金すればまともなサイトをひとつ作れるようになるのでおすすめできる。
+                    </p>
+                    <p>
+                      私の場合は「HTMLを理解してオリジナルのサイトが作れるようになる」という段階に入るにはprogateでは足りず、CreatorQuestのほうが理解しやすかった。これは人によると思う。
+                    </p>
+                  </li>
+                  <li>
+                    <a
+                      title="開発者向けのウェブ技術"
+                      href="https://developer.mozilla.org/ja/docs/Web"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >mdn web docs</a
+                    >
+                    <p>
+                      「初心者」を「Web開発者」にするために作られた無料の教材であり、チュートリアルだけでJavaScriptやWeb
+                      APIまで学べる。
+                    </p>
+                    <p>
+                      もっと学びたいという人にはおすすめできるが、情報量が非常に多いので勉強が苦手な初心者にはおすすめしない。私はいつかチュートリアルだけでも完走したいなって思ってる。
+                    </p>
+                  </li>
+                </ul>
+                <h3>UIデザイン/CSS</h3>
+                <ul>
+                  <li>
+                    <a
+                      title="CSS Stock"
+                      href="https://pote-chil.com/css-stock/ja"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >CSS Stock</a
+                    >
+                    <p>
+                      このページ（制作メモ）のアコーディオンのデザインで参考にさせていただきました！
+                      矢印の向きとか切り替えるの苦手なんですよね……どこがどうなってるか想像つきにくくて
+                      自分で作ると上手くいかないのです。ちゃんと覚えたいな〜
+                    </p>
+                  </li>
+                  <li>
+                    <a
+                      title="DESIGN MEMO 2.0"
+                      href="https://designmemo.jp/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >DESIGN MEMO 2.0</a
+                    >
+                    <p>
+                      <a
+                        title="グラスモーフィズムを表現するときのヒント"
+                        href="https://designmemo.jp/2021/01/glassmorphism.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >グラスモーフィズムの表現</a
+                      >で参考にさせていただきました。
+                      モーフィズム系はもっとスキルアップしたいですね、かわいいので。
+                      ボタンみたいになってるやつが好きなのでできるようにがんばります！
+                    </p>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </li>
         </ul>
-      </details>
-    </nav>
-  </header>
-  <main>
-    <div class="top-container">
-      <h2>制作メモ</h2>
-      <p>いろんな気付きメモ</p>
-    </div>
-    <section class="article-container">
-      <ul class="article-wrapper">
-        <li class="item" id="howtomake_articles">
-          <div class="card">
-            <div class="heading">
-              <p class="date">2025/04/18</p>
-              <h3><span class="label">新規</span>しっくりくる文章を書く</h3>
-            </div>
-            <details class="content">
-              <summary>
-                <p>納得いく文章をすんなり書けるようにするための、私の考え方メモ。</p>
-              </summary>
-              <h4>書く内容が出てこないとき</h4>
-              <ul>
-                <li>
-                  好きなものの感想を書く
-                  <p>好きなものの話であれば言葉が出てきやすい。詳しく語れなくてもいいので、好きな部分や誰かに広めたい部分を書いていく。読み返したときに自分でも楽しめる文章があると、サイト運営自体も続けやすい。</p>
-                  <p>
-                    逆に、読み返したときに「つまんないな〜」「自分性格悪いな……」と思ってしまうようなジャンルは書かない。私の場合、「批評的な感想」「日記（卑屈な内容になりがち）」はいい感じに書けないので基本的には避けるようにしている。
-                  </p>
-                </li>
-                <li>
-                  文章がまとまらない場合
-                  <p>まずは書きたいことを箇条書きにする。次に、箇条書きを元にして文を書いてみる。書いた文が納得いかなかったら、それを下書きにしてまた文を書く。</p>
-                  <p>あるいは書けそうな気分になるまでそのまま置いておく。何日か置いておくと頭の中が整理されて、書く順序を入れ替えたり必要のない部分を省いたりしやすくなる。</p>
-                </li>
-              </ul>
-              <h4>気にしすぎなくていいこと</h4>
-              <ul>
-                <li>
-                  読みやすさを意識しすぎない
-                  <p>例えば「です・ます口調」と「だ・である口調」は混ざらないほうが読みやすいかもしれないが、混ざっている状態が（自分の口調として）自然だと感じる場合は混ざったままでもいい。</p>
-                  <p>また推しや好きな作品について話すときは、「みなさんご存知の通り、うちの推しは天才ですが……」とみんなが知っている前提で書き始めてもいい。</p>
-                  <p>文章のルールを守ったり、いろんな読み手を意識することよりも「言いたいことが言えているという納得感」を優先したほうが、ちゃんと書けたという実感と満足感があり続きやすいと思う。</p>
-                </li>
-                <li>
-                  考察の正確性にこだわりすぎない
-                  <p>
-                    作品の考察をするとき、自分の捉え方や感じ方が「正しいかどうか」を気にしすぎるとなかなか書きづらいと思う。確かに作者が伝えたい「正しい意図」はあるかもしれないが、そこを追い求めると作品や作者、背景情報などの知識量の問題になってくる。
-                  </p>
-                  <p>それよりは「自分の印象に残った部分について、自分はどう捉えたか」というテーマで書きながら作品から受け取れたメッセージについて考えるほうが、消費者として普通の在り方だと思っている。</p>
-                  <p>「別の作品をインスパイアしているかも」と思ったときは、自分の記憶が合っているか確認するためにインスパイア元作品を確認するようにしているが、基本的には思ったことを書けばいい。</p>
-                </li>
-                <li>
-                  修正・削除・前言撤回を気軽にする
-                  <p>言いたいことがちゃんと言えていない記事を削除したり、前回の記事で宣言したことと違うことをしたら今回の記事で撤回したりは普通にする。</p>
-                  <p>書いた時点ではベストを尽くしていたし、今の時点では思考も判断力も成長して変わったのだから、その時々の考えに合わせて柔軟でいる。</p>
-                </li>
-              </ul>
-              <h4>環境を整える</h4>
-              <ul>
-                <li>
-                  CSSを調整する・制作環境を改善する
-                  <p>段落と段落の間隔やフォントサイズなど、気になるところがあればマメにCSSを調整する。文章を書くのに使っているアプリなども、使いやすくて気に入るものを使う。</p>
-                  <p>書くときも見せるときも読むときも、納得いく仕上がりに整えておくと満足度が高いし、楽しみながらブログを続けられると思う。</p>
-                </li>
-              </ul>
-            </details>
-          </div>
-        </li>
-        <li class="item" id="100qna">
-          <div class="card">
-            <div class="heading">
-              <p class="date">2024/09/17</p>
-              <h3>『個人サイト管理人に100の質問』に回答しました</h3>
-            </div>
-            <details class="content">
-              <summary>
-                <p>100質テンプレを３つお借りしました。</p>
-              </summary>
-              <p><a href="https://enacum.me/notes/articles/100qna.html" title="個人サイト管理人に100の質問　回答" target="_blank"
-                  rel="noopener noreferrer">100の質問　回答（個人サイトに遷移します）</a></p>
-              <p>
-                100質テンプレを見ていたら、サイトやコンテンツ制作に関する悩みなどの質問もあったので、私も回答させていただきました。
-              </p>
-              <p>質問被りなどを除いて98問回答したので、ご興味があればご覧になってください。</p>
-            </details>
-          </div>
-        </li>
-        <li class="item" id="webp">
-          <div class="card">
-            <div class="heading">
-              <p class="date">2024/06/02</p>
-              <h3>画像はWebp形式がおすすめ</h3>
-            </div>
-            <details class="content">
-              <summary>
-                <p>画像サイズが軽くなるよ</p>
-              </summary>
-              <p>
-                画像サイズが重くてサイトの読み込みが遅い、と思っている人にはWebPをおすすめします。<br>WebP（ウェッピー）とは、PNGやJPEGに代わる新しい画像形式です。
-              </p>
-              <p>
-                画像をWebPに変換すると画質をほぼ保ったまま画像データが軽くなります。<br><strong>デメリット</strong>としては「WebP形式に対応しているサービス」は見たことがないので、投稿サイト・SNS・アプリなどで使いたい画像はPNGまたはJPEGデータを別に保管しておく必要があるということです。
-              </p>
-              <p>公式的な変換方法は<a title="Squppsh - 画像変換" href="https://squoosh.app/" target="_blank"
-                  rel="noopener noreferrer">Squoosh</a>に画像をドラッグ&ドロップし、圧縮形式「WebP」を選んだら右下の保存ボタンを押すだけです。
-              </p>
-              <p>
-                サイトに載せる画像のうち共有する必要がないものはWebPにして、バナーなどはPNGやJPEG形式を使い、PCにはPNGまたはJPEGで保管しておくと便利です。
-              </p>
-            </details>
-          </div>
-        </li>
-        <li class="item" id="reference">
-          <div class="card">
-            <div class="heading">
-              <p class="date">2024/06/02</p>
-              <h3>【HTML&CSS追加】お世話になったサイト</h3>
-            </div>
-            <details class="content">
-              <summary>
-                <p>HTML / CSS / JavaScriptで参考にしたサイト</p>
-              </summary>
-              <h3>HTML&CSS</h3>
-              <ul>
-                <li>
-                  <a title="Webクリエータになるための壮絶な戦いが今はじまる。" href="https://creatorquest.jp/" target="_blank"
-                    rel="noopener noreferrer">CreatorQuest</a>
-                  <p>めっちゃおすすめ。ほぼHTMLしか学べないが、楽しかったしわかりやすかった。</p>
-                  <p>「Webクリエータになるための壮絶な冒険が今はじまる。」とトップに書いてあるが、勉強中もこのノリが続く。かといって鬱陶しいわけでもなく本当に楽しい。冒険の続きが気になる展開もある。</p>
-                  <p>
-                    説明が細かめなので、コードの意味を理解しやすい。ただ<strong>デメリット</strong>として、ここで学ぶ書き方では実践で使うには不十分なこともある。どちらにせよCSSのレッスンがないので他の教材と併用することになる。
-                  </p>
-                </li>
-                <li>
-                  <a title="プログラミングで人生の可能性を広げよう" href="https://prog-8.com/" target="_blank"
-                    rel="noopener noreferrer">progate</a>
-                  <p>簡単でざっくりと学べる。無料で学びたいなら他にも教材はあるが、ちょっと課金すればまともなサイトをひとつ作れるようになるのでおすすめできる。
-                  </p>
-                  <p>私の場合は「HTMLを理解してオリジナルのサイトが作れるようになる」という段階に入るにはprogateでは足りず、CreatorQuestのほうが理解しやすかった。これは人によると思う。</p>
-                </li>
-                <li>
-                  <a title="開発者向けのウェブ技術" href="https://developer.mozilla.org/ja/docs/Web" target="_blank"
-                    rel="noopener noreferrer">mdn web docs</a>
-                  <p>「初心者」を「Web開発者」にするために作られた無料の教材であり、チュートリアルだけでJavaScriptやWeb APIまで学べる。</p>
-                  <p>もっと学びたいという人にはおすすめできるが、情報量が非常に多いので勉強が苦手な初心者にはおすすめしない。私はいつかチュートリアルだけでも完走したいなって思ってる。</p>
-                </li>
-              </ul>
-              <h3>UIデザイン/CSS</h3>
-              <ul>
-                <li>
-                  <a title="CSS Stock" href="https://pote-chil.com/css-stock/ja" target="_blank"
-                    rel="noopener noreferrer">CSS Stock</a>
-                  <p>
-                    このページ（制作メモ）のアコーディオンのデザインで参考にさせていただきました！
-                    矢印の向きとか切り替えるの苦手なんですよね……どこがどうなってるか想像つきにくくて
-                    自分で作ると上手くいかないのです。ちゃんと覚えたいな〜
-                  </p>
-                </li>
-                <li>
-                  <a title="DESIGN MEMO 2.0" href="https://designmemo.jp/" target="_blank"
-                    rel="noopener noreferrer">DESIGN MEMO 2.0</a>
-                  <p>
-                    <a title="グラスモーフィズムを表現するときのヒント" href="https://designmemo.jp/2021/01/glassmorphism.html"
-                      target="_blank" rel="noopener noreferrer">グラスモーフィズムの表現</a>で参考にさせていただきました。
-                    モーフィズム系はもっとスキルアップしたいですね、かわいいので。
-                    ボタンみたいになってるやつが好きなのでできるようにがんばります！
-                  </p>
-                </li>
-              </ul>
-            </details>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <div class="copyright">
-      <small>&copy; 2024 enacum.</small>
-    </div>
-  </footer>
-</body>
-
+      </section>
+    </main>
+    <footer>
+      <div class="copyright">
+        <small>&copy; 2024 enacum.</small>
+      </div>
+    </footer>
+  </body>
 </html>

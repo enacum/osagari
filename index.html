@@ -1,90 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
+    <title>おさがり</title>
+    <meta
+      name="description"
+      content="個人サイトのオタクがサイト制作メモを書いたりテンプレートを配布するサイト。"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/android-chrome-256x256.png"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="https://enacum.me/news.xml"
+    />
+    <meta property="og:site_name" content="おさがり" />
+    <meta property="og:title" content="おさがり" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://osagari.enacum.me/" />
+    <meta
+      property="og:description"
+      content="個人サイトのオタクがサイト制作メモを書いたりテンプレートを配布するサイト。"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="images/icon-512x512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="css/other.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>おさがり</title>
-  <meta name="description" content="個人サイトのオタクがサイト制作メモを書いたりテンプレートを配布するサイト。">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="images/android-chrome-256x256.png">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://enacum.me/news.xml">
-  <meta property="og:site_name" content="おさがり">
-  <meta property="og:title" content="おさがり">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://osagari.enacum.me/">
-  <meta property="og:description" content="個人サイトのオタクがサイト制作メモを書いたりテンプレートを配布するサイト。">
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:image" content="images/icon-512x512.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <script src="css/other.js" defer></script>
-</head>
-
-<body>
-  <header>
-    <div class="site-name">
-      <h1>おさがり</h1>
-    </div>
-    <nav>
-      <details>
-        <summary>メニュー</summary>
-        <ul>
-          <li><span>ホーム</span></li>
-          <li><a href="templates/index.html" title="テンプレート">テンプレ</a></li>
-          <li><a href="notes/index.html" title="サイト制作メモ">メモ</a></li>
-        </ul>
-      </details>
-    </nav>
-  </header>
-  <main>
-    <div class="about-here">
-      <div class="whats-this">
-        <h2>このサイトは…</h2>
+  <body>
+    <header>
+      <div class="site-name">
+        <h1>おさがり</h1>
       </div>
-      <p>
-        個人サイトを制作しているオタクが<br>
-        <a title="サイト制作メモのページ" href="notes/index.html">サイト制作メモ</a>を書いたり<br>
-        サイトデザインの<a title="テンプレートのページ" href="templates/index.html">テンプレート</a>を配布するサイト。
-      </p>
-      <details>
-        <summary><span>about me</span></summary>
-        <div class="shadow">
-          <h3>info</h3>
+      <nav>
+        <details>
+          <summary>メニュー</summary>
+          <ul>
+            <li><span>ホーム</span></li>
+            <li>
+              <a href="templates/index.html" title="テンプレート">テンプレ</a>
+            </li>
+            <li><a href="notes/index.html" title="サイト制作メモ">メモ</a></li>
+          </ul>
+        </details>
+      </nav>
+    </header>
+    <main>
+      <div class="about-here">
+        <div class="whats-this">
+          <h2>このサイトは…</h2>
         </div>
         <p>
-          <a href="https://enacum.me">enacum.</a>の制作過程で身につけた知識と、<br>
-          過去に使っていたデザイン等を公開しています。
+          個人サイトを制作しているオタクが<br />
+          <a title="サイト制作メモのページ" href="notes/index.html"
+            >サイト制作メモ</a
+          >を書いたり<br />
+          サイトデザインの<a
+            title="テンプレートのページ"
+            href="templates/index.html"
+            >テンプレート</a
+          >を配布するサイト。
         </p>
-        <div class="infomation">
+        <details>
+          <summary><span>about me</span></summary>
+          <div class="shadow">
+            <h3>info</h3>
+          </div>
           <p>
-            当サイトはリンクフリーです。
+            <a href="https://enacum.me">enacum.</a
+            >の制作過程で身につけた知識と、<br />
+            過去に使っていたデザイン等を公開しています。
           </p>
+          <div class="infomation">
+            <p>当サイトはリンクフリーです。</p>
+            <p>
+              サイト名：おさがり<br />
+              かいてる人：えなくん<br />
+              URL：https://enacum.github.io/osagari<br />
+              <img class="banner" src="images/banner.png" alt="バナー" />
+            </p>
+            <p>
+              サーチサイトに登録しています。<br />
+              <a href="https://compslink.jp">COMPASS LINK</a>
+            </p>
+          </div>
+          <div class="shadow">
+            <h3>contact</h3>
+          </div>
           <p>
-            サイト名：おさがり<br>
-            かいてる人：えなくん<br>
-            URL：https://enacum.github.io/osagari<br>
-            <img class="banner" src="images/banner.png" alt="バナー">
+            ご連絡は
+            <a title="Wavebox" href="https://wavebox.me/wave/55v57ypgy6qv8a2b/"
+              >Wavebox</a
+            >
+            からどうぞ。
           </p>
-          <p>サーチサイトに登録しています。<br>
-            <a href="https://compslink.jp">COMPASS LINK</a>
-          </p>
-        </div>
-        <div class=" shadow">
-          <h3>contact</h3>
-        </div>
-        <p>ご連絡は
-          <a title="Wavebox" href="https://wavebox.me/wave/55v57ypgy6qv8a2b/">Wavebox</a> からどうぞ。</p>
-      </details>
-    </div>
-    <div class="news">
-      <h2>更新履歴</h2>
-      <ul>
+        </details>
+      </div>
+      <div class="news">
+        <h2>更新履歴</h2>
+        <ul>
+          <li>
+            <p><span class="date">2026/09/18</span></p>
+            <p>
+              <a
+                title="サイト制作メモのページ"
+                href="notes/index.html#movetoastro"
+                >Astroに移行した</a
+              >のメモを公開しました。
+            </p>
+          </li>
           <li>
             <p><span class="date">2026/04/21</span></p>
             <p>
@@ -95,32 +137,28 @@
               >のテンプレートを配布しました。
             </p>
           </li>
-        <li>
-          <p><span class="date">2025/04/18</span></p>
-          <p>
-            <a title="サイト制作メモのページ" href="notes/index.html#howtomake_articles">しっくりくる文章を書く</a>のメモを公開しました。
-          </p>
-        </li>
-        <li>
-          <p><span class="date">2024/12/21</span></p>
-          <p>
-            <a title="アイコン配布のページ" href="templates/articles/icons/index.html">ホーム、メニュー、RSSアイコン</a>の配布を開始しました。<br>
-            <a title="RSSのテンプレート配布ページ" href="templates/articles/rss/index.html">RSSフィード（PHP）</a>のテンプレートを配布しました。
-          </p>
-        </li>
-      </ul>
-      <div class="news-list">
-        <a title="更新一覧" href="news/index.html">
-          <p>read more</p>
-        </a>
+          <li>
+            <p><span class="date">2025/04/18</span></p>
+            <p>
+              <a
+                title="サイト制作メモのページ"
+                href="notes/index.html#howtomake_articles"
+                >しっくりくる文章を書く</a
+              >のメモを公開しました。
+            </p>
+          </li>
+        </ul>
+        <div class="news-list">
+          <a title="更新一覧" href="news/index.html">
+            <p>read more</p>
+          </a>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <div class="copyright">
-      <small>&copy; 2024 enacum.</small>
-    </div>
-  </footer>
-</body>
-
+    </main>
+    <footer>
+      <div class="copyright">
+        <small>&copy; 2024 enacum.</small>
+      </div>
+    </footer>
+  </body>
 </html>
