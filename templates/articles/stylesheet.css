@@ -7,29 +7,31 @@ html {
 
 :root {
   --background: #f4f4f4;
-  --font: #1E2327;
+  --font: #1e2327;
   --highlight: #4f9e92;
+  --untihighlight: #d06262;
   --grass: #fefefe;
   --shadow: #e7e7e7;
   --light: white;
-  --popup: rgba(255, 255, 255, .4);
-  --backshadow: rgba(255, 255, 255, .5);
+  --popup: rgba(255, 255, 255, 0.4);
+  --backshadow: rgba(255, 255, 255, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    transition: .5s;
+    transition: 0.5s;
   }
 
   :root {
-    --background: #1E2327;
-    --font: #D7D7D7;
+    --background: #1e2327;
+    --font: #d7d7d7;
     --highlight: #4f9e92;
+    --untihighlight: #d06262;
     --grass: #293035;
-    --shadow: rgba(0, 0, 0, .3);
-    --light: rgba(37, 41, 44, .8);
-    --popup: rgba(37, 44, 49, .8);
-    --backshadow: rgba(44, 51, 57, .3);
+    --shadow: rgba(0, 0, 0, 0.3);
+    --light: rgba(37, 41, 44, 0.8);
+    --popup: rgba(37, 44, 49, 0.8);
+    --backshadow: rgba(44, 51, 57, 0.3);
   }
 }
 
@@ -68,7 +70,9 @@ body {
   height: auto;
   margin: 0 auto;
   padding: 1rem;
-  font-family: "Apple SD Gothic Neo", "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+  font-family:
+    "Apple SD Gothic Neo", "游ゴシック体", "YuGothic", "游ゴシック Medium",
+    "Yu Gothic Medium", sans-serif;
   color: var(--font);
   background-color: var(--background);
 }
@@ -133,6 +137,15 @@ header {
 
 nav {
   position: relative;
+}
+
+strong,
+.strong {
+  color: var(--untihighlight);
+}
+
+.contents:has(.strong) {
+  border: 2px solid var(--untihighlight);
 }
 
 details[open] ul {
@@ -201,7 +214,8 @@ img {
 .shadow {
   margin: 1em 0 1.5em 0;
   border-radius: 0.7em;
-  box-shadow: 13px 13px 30px var(--shadow),
+  box-shadow:
+    13px 13px 30px var(--shadow),
     -13px -13px 30px var(--light);
 }
 
@@ -220,7 +234,8 @@ img {
   padding: 0.5em 2em;
   margin: 1em 0 1.5em 0;
   border-radius: 0.7em;
-  box-shadow: 13px 13px 30px var(--shadow),
+  box-shadow:
+    13px 13px 30px var(--shadow),
     -13px -13px 30px var(--light);
   border: 0.05em solid var(--popup);
 }
