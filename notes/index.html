@@ -64,13 +64,73 @@
       </div>
       <section class="article-container">
         <ul class="article-wrapper">
+          <li class="item" id="astro-issues">
+            <div class="card">
+              <div class="heading">
+                <p class="date">2026/10/23</p>
+                <h3><span class="label">新規</span>Astro構築中につまずいたこと</h3>
+              </div>
+              <details open class="content">
+                <summary>
+                  <p>
+                    ちゃんと勉強しないと大変だぞ。
+                  </p>
+                </summary>
+                <p>前回の<a href="#movetoastro">Astroに移行した</a>では、<strong>Astroにしてからめっちゃ更新の手間が減ったけど、構築するまではめっちゃ苦労した</strong>という話をしました。今回は順番に苦労した部分を発表していこうと思います。</p>
+                <p>サイトを一から作るだけなら<a href="https://docs.astro.build/en/tutorial/0-introduction/" target="_blank" rel="noopener noreferrer">Astroのチュートリアル</a>を見ながら素直に構築すれば作れます(<a href="https://docs.astro.build/en/concepts/why-astro/" target="_blank" rel="noopener noreferrer">Astroのガイド</a>も続けて学んだほうがいいのかも……あとで学んどこ)。しかし部分的にでも自分でコードを書くのであれば、一つ一つ勉強したほうが苦労が少ないはずです。ちなみに私は勉強せずに突っ走って苦労。</p>
+                <h4>目次</h4>
+                <ul>
+                  <li><a href="#commandline">コマンドライン（ターミナル）</a></li>
+                  <li><a href="#prettier-eslint-typescript">Prettier、ESLint、Typescript</a></li>
+                  <li><a href="#github">Github</a></li>
+                  <li><a href="#regular-expression">正規表現</a></li>
+                  <li><a href="#conclusion">おわりに</a></li>
+                </ul>
+                <h4 id="commandline">コマンドライン（ターミナル）</h4>
+                <p>まず以下のページで学びましょう。これは8割くらいはちゃんと読んだ。</p>
+                <p><a href="https://developer.mozilla.org/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line" target="_blank" rel="noopener noreferrer">コマンドライン短期集中講座 - MDN</a></p>
+                <p>DiaやCometのようなAIブラウザを使って学習すれば、理解しづらいところをいちいちAIに聞けるので楽ですよ。今はChromeもAIサイドバーが付いているかも。</p>
+                <p>このコマンドラインというもの、毎回使うものではあるけど使うコマンド自体は多くないです。でもこれを機に「何ができるものなのか」を知っておくとちょっと良い。</p>
+
+                <h4 id="prettier-eslint-typescript">Prettier、ESLint、Typescript</h4>
+
+                <p>コマンドライン講座やAstroのガイドで、PrettierやESLintを導入するように言われたので、言われるがままに導入した。Prettierはコードを自動で整形するツール（インデントなどを自動で付けて綺麗にしてくれる）、ESLintはコードの問題がありそうな部分を指摘してくれるツール（ミスの修正案も出してくれる）。</p>
+                <p>これらを導入したあたりで起こった問題は以下の通り。</p>
+                <ol>
+                  <li><span class="strong">Prettier</span>：意図しないところで行を折り返されるなど。
+                    そこで折り返したら意味が変わっちゃうじゃん？ってところで折り返されたりして困った。Markdownだったと思う。目次とか作るのが上手くいかなくて、結局PrettierがMarkdownを無視するような設定にしちゃったか、あるいは目次の書き方を変えたと思う。</li>
+                  <li><span class="strong">ESLint</span>：Typescriptの型チェックをしてくれる。
+                    「そもそもTypescriptって何？」「型って……何？？」っていう状態の人間なので、Typescriptの型に問題がないかチェックされてもなにもわからない。未だにわからない……でもかなりの頻度でチェックされた。その度にコードにエラーが出るので、「どこをどう直せばいいんだ……」ってなるし、完成したあとも「どこがどうなったんだ……」ってなってる。Typescriptの型、ちゃんと勉強したほうがいいらしい。</li>
+                </ol>
+
+                <h4 id="github">Github</h4>
+
+                <p>Astroのチュートリアルで使うサービス。私は今も使っています。</p>
+                <p>問題は専門用語の多さです。リポジトリ、デプロイ、プッシュ、プル、コミット、ステージング、ビルド。このあたり結構使う。どの場所で何がどうなってどこへいくのか……それがほとんど専門用語で説明される。</p>
+                <p>Githubは変更履歴を管理してくれる超便利ツールで、コードがよくわかんなくなったときに以前の変更点まで戻れたり、「日々の更新作業」と「長期的なサイトデザイン変更作業」を分けて進行できたり、使いこなしたら便利なはず……でも全部英語なこともあって、理解しきれていない。</p>
+                <p>Github、そしてGitについての説明は検索するといっぱい出てくるので、どっかのタイミングで勉強しておくといい。</p>
+
+                <h4 id="regular-expression">正規表現</h4>
+
+                <p>これめちゃくちゃ便利。私は今回、<span class="strong">HTMLで作っていた記事をすべてMarkdownに変換する</span>という作業が必要になったのですが、正規表現を使った一括置換を使えばこの作業は一瞬で終わります、マジで。</p>
+                <p><code class="strong">&lt;img src&equals;"images/AAA.png" alt&equals;"###" /&gt;</code>のような、部分的に内容は異なるけど構造は同じ、みたいなものをすべて指定できる。部分一致的なものを正確に指定できるんですよ。</p>
+                <p>しかも学習にかかる労力も多分Markdown程度っぽい。HTMLサイトをAstro用に書き替えなければならない人はめちゃくちゃ使います。</p>
+                <p>ちなみに、こだわったデザインのためにHTMLを複雑にしている人はMarkdownではなく、コンポーネントも使用できるMDX形式（Markdown形式の進化系）を使うこともお勧めします。</p>
+
+                <h4 id="conclusion">おわりに</h4>
+
+                <p>AIを使えばろくに勉強していなくてもとりあえず進められるし、正規表現なども全部書いてくれるのですが、いちいち似たようなことを聞くのもそれはそれで労力ですし、頭もパンクします。私は今後のためにチマチマ勉強していこうと思います。</p>
+                <p>ではこの辺りでさらばだ……アスタ・ラ・ビスタ、ベイビー！（地獄で会おうぜ、ベイビー）</p>
+              </details>
+            </div>
+          </li>
           <li class="item" id="movetoastro">
             <div class="card">
               <div class="heading">
                 <p class="date">2026/09/18</p>
-                <h3><span class="label">新規</span>Astroに移行した</h3>
+                <h3>Astroに移行した</h3>
               </div>
-              <details open class="content">
+              <details class="content">
                 <summary>
                   <p>
                     Astroを使ったら、サイト運営がどう変化したか。
@@ -143,7 +203,7 @@
                 <p><span class="strong">注意事項としては、URLが変わる場合があります</span>。独自ドメインを取得している人であれば「サーバー代＋独自ドメイン代」が「独自ドメイン代のみ」になるのでめちゃくちゃコストダウンするだけなのですが、そうでない人はURLが「https://任意の文字列.netlify.app」のようになりますね。この点も新規でサイトを作る場合ならスルーできる問題です。</p>
                 <p>私はいままではレンタルサーバーを有料（年6600円くらいかな？）で借りていて、サーバーのプランで「独自ドメインが無料で使える」という状態でした。それが<span class="strong">サーバー代無料、独自ドメイン代のみ（年1000円くらい）</span>になるようです。まだレンタルサーバー契約期間だから、独自ドメインの支払いは始まってないんですけどね。</p>
                 <h4 id="conclusion">締め</h4>
-                <p>【Astroを使ったらどうなったか】の話は以上になります。次回は【Astro構築中につまづいたこと、勉強したこと】などをまとめようと思います。アリーヴェデルチ！（さよならだ）</p>
+                <p>【Astroを使ったらどうなったか】の話は以上になります。次回は【Astro構築中につまずいたこと、勉強したこと】などをまとめようと思います。アリーヴェデルチ！（さよならだ）</p>
               </details>
             </div>
           </li>
